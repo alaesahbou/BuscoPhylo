@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le : mar. 02 août 2022 à 00:42
--- Version du serveur :  5.7.34-log
--- Version de PHP : 8.0.11
+-- Hôte : 127.0.0.1:3306
+-- Généré le : lun. 01 août 2022 à 23:43
+-- Version du serveur : 5.7.36
+-- Version de PHP : 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,16 +27,18 @@ SET time_zone = "+00:00";
 -- Structure de la table `tbl_about`
 --
 
-CREATE TABLE `tbl_about` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_about`;
+CREATE TABLE IF NOT EXISTS `tbl_about` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `about` longtext NOT NULL,
   `tagline` longtext NOT NULL,
   `choose_plan` longtext NOT NULL,
   `account` longtext NOT NULL,
   `enjoy` longtext NOT NULL,
   `documentation` text NOT NULL,
-  `citation` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `citation` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tbl_about`
@@ -51,10 +53,12 @@ INSERT INTO `tbl_about` (`id`, `about`, `tagline`, `choose_plan`, `account`, `en
 -- Structure de la table `tbl_alerts`
 --
 
-CREATE TABLE `tbl_alerts` (
+DROP TABLE IF EXISTS `tbl_alerts`;
+CREATE TABLE IF NOT EXISTS `tbl_alerts` (
   `code` varchar(50) NOT NULL,
   `type` varchar(255) NOT NULL,
-  `comment` varchar(255) NOT NULL
+  `comment` varchar(255) NOT NULL,
+  PRIMARY KEY (`code`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -99,14 +103,16 @@ INSERT INTO `tbl_alerts` (`code`, `type`, `comment`) VALUES
 -- Structure de la table `tbl_comments`
 --
 
-CREATE TABLE `tbl_comments` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_comments`;
+CREATE TABLE IF NOT EXISTS `tbl_comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `item` varchar(255) NOT NULL,
   `user` varchar(255) NOT NULL,
   `date_time` varchar(255) NOT NULL,
   `comment` longtext NOT NULL,
   `likes` int(11) NOT NULL DEFAULT '0',
-  `dislikes` int(11) NOT NULL DEFAULT '0'
+  `dislikes` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -115,15 +121,17 @@ CREATE TABLE `tbl_comments` (
 -- Structure de la table `tbl_countries`
 --
 
-CREATE TABLE `tbl_countries` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_countries`;
+CREATE TABLE IF NOT EXISTS `tbl_countries` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `iso` char(2) NOT NULL,
   `name` varchar(80) NOT NULL,
   `nicename` varchar(80) NOT NULL,
   `iso3` char(3) DEFAULT NULL,
   `numcode` smallint(6) DEFAULT NULL,
-  `phonecode` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `phonecode` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=240 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `tbl_countries`
@@ -376,12 +384,14 @@ INSERT INTO `tbl_countries` (`id`, `iso`, `name`, `nicename`, `iso3`, `numcode`,
 -- Structure de la table `tbl_coupons`
 --
 
-CREATE TABLE `tbl_coupons` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_coupons`;
+CREATE TABLE IF NOT EXISTS `tbl_coupons` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `code` varchar(255) NOT NULL,
   `discount` varchar(255) NOT NULL,
   `limit_c` varchar(255) NOT NULL,
-  `usage_c` int(11) NOT NULL DEFAULT '0'
+  `usage_c` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -390,13 +400,15 @@ CREATE TABLE `tbl_coupons` (
 -- Structure de la table `tbl_episodes`
 --
 
-CREATE TABLE `tbl_episodes` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_episodes`;
+CREATE TABLE IF NOT EXISTS `tbl_episodes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `item` varchar(255) NOT NULL,
   `link` varchar(255) NOT NULL,
   `size` int(11) NOT NULL,
   `streaming` varchar(255) NOT NULL,
-  `episode_no` int(11) NOT NULL
+  `episode_no` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -405,13 +417,15 @@ CREATE TABLE `tbl_episodes` (
 -- Structure de la table `tbl_episode_subs`
 --
 
-CREATE TABLE `tbl_episode_subs` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_episode_subs`;
+CREATE TABLE IF NOT EXISTS `tbl_episode_subs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `item` varchar(255) NOT NULL,
   `link` varchar(255) NOT NULL,
   `language` varchar(255) NOT NULL,
   `src` varchar(255) NOT NULL,
-  `episode` int(11) NOT NULL
+  `episode` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -420,10 +434,12 @@ CREATE TABLE `tbl_episode_subs` (
 -- Structure de la table `tbl_favourites`
 --
 
-CREATE TABLE `tbl_favourites` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_favourites`;
+CREATE TABLE IF NOT EXISTS `tbl_favourites` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` varchar(255) NOT NULL,
-  `item` varchar(255) NOT NULL
+  `item` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -432,9 +448,11 @@ CREATE TABLE `tbl_favourites` (
 -- Structure de la table `tbl_genres`
 --
 
-CREATE TABLE `tbl_genres` (
-  `id` int(11) NOT NULL,
-  `genre` varchar(255) NOT NULL
+DROP TABLE IF EXISTS `tbl_genres`;
+CREATE TABLE IF NOT EXISTS `tbl_genres` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `genre` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -443,8 +461,9 @@ CREATE TABLE `tbl_genres` (
 -- Structure de la table `tbl_items`
 --
 
-CREATE TABLE `tbl_items` (
-  `c_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_items`;
+CREATE TABLE IF NOT EXISTS `tbl_items` (
+  `c_id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `item_id` varchar(50) NOT NULL,
   `description` longtext NOT NULL,
@@ -462,8 +481,10 @@ CREATE TABLE `tbl_items` (
   `views` varchar(255) NOT NULL DEFAULT '0',
   `status` varchar(255) NOT NULL DEFAULT 'Visible',
   `email` varchar(255) NOT NULL,
-  `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `date` date NOT NULL,
+  PRIMARY KEY (`c_id`),
+  UNIQUE KEY `item_id` (`item_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=146 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -471,8 +492,9 @@ CREATE TABLE `tbl_items` (
 -- Structure de la table `tbl_paypal`
 --
 
-CREATE TABLE `tbl_paypal` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_paypal`;
+CREATE TABLE IF NOT EXISTS `tbl_paypal` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `API_USER` varchar(255) NOT NULL,
   `API_PASS` varchar(255) NOT NULL,
   `API_SIG` varchar(255) NOT NULL,
@@ -480,8 +502,9 @@ CREATE TABLE `tbl_paypal` (
   `API_PASS_SB` varchar(255) NOT NULL,
   `API_SIG_SB` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL,
-  `switch` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `switch` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tbl_paypal`
@@ -496,13 +519,15 @@ INSERT INTO `tbl_paypal` (`id`, `API_USER`, `API_PASS`, `API_SIG`, `API_USER_SB`
 -- Structure de la table `tbl_plans`
 --
 
-CREATE TABLE `tbl_plans` (
+DROP TABLE IF EXISTS `tbl_plans`;
+CREATE TABLE IF NOT EXISTS `tbl_plans` (
   `id` int(11) NOT NULL,
   `plan` varchar(255) NOT NULL,
   `valid` varchar(255) NOT NULL,
   `cost` varchar(255) NOT NULL,
   `valid_type` varchar(255) NOT NULL,
-  `max_size` varchar(255) NOT NULL DEFAULT '480'
+  `max_size` varchar(255) NOT NULL DEFAULT '480',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -520,10 +545,12 @@ INSERT INTO `tbl_plans` (`id`, `plan`, `valid`, `cost`, `valid_type`, `max_size`
 -- Structure de la table `tbl_privacy`
 --
 
-CREATE TABLE `tbl_privacy` (
-  `id` int(11) NOT NULL,
-  `privacy` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `tbl_privacy`;
+CREATE TABLE IF NOT EXISTS `tbl_privacy` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `privacy` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tbl_privacy`
@@ -538,11 +565,13 @@ INSERT INTO `tbl_privacy` (`id`, `privacy`) VALUES
 -- Structure de la table `tbl_reset_tokens`
 --
 
-CREATE TABLE `tbl_reset_tokens` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_reset_tokens`;
+CREATE TABLE IF NOT EXISTS `tbl_reset_tokens` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `account` varchar(255) NOT NULL,
   `token` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL
+  `email` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -551,14 +580,16 @@ CREATE TABLE `tbl_reset_tokens` (
 -- Structure de la table `tbl_reviews`
 --
 
-CREATE TABLE `tbl_reviews` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_reviews`;
+CREATE TABLE IF NOT EXISTS `tbl_reviews` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `item` varchar(255) NOT NULL,
   `user` varchar(255) NOT NULL,
   `reason` varchar(255) NOT NULL,
   `date_time` varchar(255) NOT NULL,
   `rates` int(11) NOT NULL,
-  `comment` longtext NOT NULL
+  `comment` longtext NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -567,11 +598,20 @@ CREATE TABLE `tbl_reviews` (
 -- Structure de la table `tbl_sessions`
 --
 
-CREATE TABLE `tbl_sessions` (
+DROP TABLE IF EXISTS `tbl_sessions`;
+CREATE TABLE IF NOT EXISTS `tbl_sessions` (
   `user` varchar(50) NOT NULL,
   `sessi_id` varchar(255) NOT NULL,
-  `ip_address` varchar(255) NOT NULL
+  `ip_address` varchar(255) NOT NULL,
+  PRIMARY KEY (`user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `tbl_sessions`
+--
+
+INSERT INTO `tbl_sessions` (`user`, `sessi_id`, `ip_address`) VALUES
+('17626867', 'e83ba6c99d31e12399805b56111827ba', '::1');
 
 -- --------------------------------------------------------
 
@@ -579,12 +619,14 @@ CREATE TABLE `tbl_sessions` (
 -- Structure de la table `tbl_single_links`
 --
 
-CREATE TABLE `tbl_single_links` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_single_links`;
+CREATE TABLE IF NOT EXISTS `tbl_single_links` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `item` varchar(255) NOT NULL,
   `link` varchar(255) NOT NULL,
   `size` int(11) NOT NULL,
-  `streaming` varchar(255) NOT NULL
+  `streaming` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -593,12 +635,14 @@ CREATE TABLE `tbl_single_links` (
 -- Structure de la table `tbl_single_subs`
 --
 
-CREATE TABLE `tbl_single_subs` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_single_subs`;
+CREATE TABLE IF NOT EXISTS `tbl_single_subs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `item` varchar(255) NOT NULL,
   `link` varchar(255) NOT NULL,
   `language` varchar(255) NOT NULL,
-  `src` varchar(255) NOT NULL
+  `src` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -607,12 +651,14 @@ CREATE TABLE `tbl_single_subs` (
 -- Structure de la table `tbl_smtp`
 --
 
-CREATE TABLE `tbl_smtp` (
+DROP TABLE IF EXISTS `tbl_smtp`;
+CREATE TABLE IF NOT EXISTS `tbl_smtp` (
   `server` varchar(30) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `conn_type` varchar(255) NOT NULL,
-  `conn_port` varchar(255) NOT NULL
+  `conn_port` varchar(255) NOT NULL,
+  PRIMARY KEY (`server`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -621,13 +667,15 @@ CREATE TABLE `tbl_smtp` (
 -- Structure de la table `tbl_stripe`
 --
 
-CREATE TABLE `tbl_stripe` (
+DROP TABLE IF EXISTS `tbl_stripe`;
+CREATE TABLE IF NOT EXISTS `tbl_stripe` (
   `pub_key` varchar(255) NOT NULL,
   `sec_key` varchar(255) NOT NULL,
   `pub_key_test` varchar(255) NOT NULL,
   `sec_key_test` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL,
-  `switch` varchar(255) NOT NULL
+  `switch` varchar(255) NOT NULL,
+  PRIMARY KEY (`pub_key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -643,11 +691,13 @@ INSERT INTO `tbl_stripe` (`pub_key`, `sec_key`, `pub_key_test`, `sec_key_test`, 
 -- Structure de la table `tbl_time`
 --
 
-CREATE TABLE `tbl_time` (
+DROP TABLE IF EXISTS `tbl_time`;
+CREATE TABLE IF NOT EXISTS `tbl_time` (
   `item_id` int(11) NOT NULL,
   `start_time` time NOT NULL,
   `end_time` time NOT NULL,
-  `time` time NOT NULL
+  `time` time NOT NULL,
+  PRIMARY KEY (`item_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -663,11 +713,15 @@ INSERT INTO `tbl_time` (`item_id`, `start_time`, `end_time`, `time`) VALUES
 -- Structure de la table `tbl_timezones`
 --
 
-CREATE TABLE `tbl_timezones` (
-  `zone_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_timezones`;
+CREATE TABLE IF NOT EXISTS `tbl_timezones` (
+  `zone_id` int(11) NOT NULL AUTO_INCREMENT,
   `country_code` char(2) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `zone_name` varchar(35) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `zone_name` varchar(35) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`zone_id`),
+  KEY `idx_country_code` (`country_code`),
+  KEY `idx_zone_name` (`zone_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=426 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tbl_timezones`
@@ -1106,15 +1160,17 @@ INSERT INTO `tbl_timezones` (`zone_id`, `country_code`, `zone_name`) VALUES
 -- Structure de la table `tbl_transactions`
 --
 
-CREATE TABLE `tbl_transactions` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_transactions`;
+CREATE TABLE IF NOT EXISTS `tbl_transactions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `trans_id` varchar(255) NOT NULL,
   `user` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `ammount` varchar(255) NOT NULL,
   `currency` varchar(255) NOT NULL,
   `purchase_date` varchar(255) NOT NULL,
-  `confirm_rec` varchar(255) NOT NULL DEFAULT '0'
+  `confirm_rec` varchar(255) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1123,10 +1179,12 @@ CREATE TABLE `tbl_transactions` (
 -- Structure de la table `tbl_used_coupons`
 --
 
-CREATE TABLE `tbl_used_coupons` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_used_coupons`;
+CREATE TABLE IF NOT EXISTS `tbl_used_coupons` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `coupon` varchar(255) NOT NULL,
-  `user` varchar(255) NOT NULL
+  `user` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1135,7 +1193,8 @@ CREATE TABLE `tbl_used_coupons` (
 -- Structure de la table `tbl_users`
 --
 
-CREATE TABLE `tbl_users` (
+DROP TABLE IF EXISTS `tbl_users`;
+CREATE TABLE IF NOT EXISTS `tbl_users` (
   `id` int(11) NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
@@ -1146,7 +1205,8 @@ CREATE TABLE `tbl_users` (
   `reg_date` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL DEFAULT 'user.svg',
   `role` varchar(255) NOT NULL DEFAULT 'user',
-  `badge` varchar(255) NOT NULL DEFAULT '0'
+  `badge` varchar(255) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1154,8 +1214,7 @@ CREATE TABLE `tbl_users` (
 --
 
 INSERT INTO `tbl_users` (`id`, `first_name`, `last_name`, `email`, `username`, `status`, `security`, `reg_date`, `image`, `role`, `badge`) VALUES
-(17626867, 'admin', 'admin', 'admin@admin.com', 'admin', '1', '$2y$10$B2749SGOa7uVCECU9hkAKOzBC0eD0c33fnsD..NS5.zeiVzWFjd46', '05-07-2022', 'avator17626867643.jpg', 'user', '1'),
-
+(17626867, 'admin', 'admin', 'admin@admin.com', 'admin', '1', '$2y$10$B2749SGOa7uVCECU9hkAKOzBC0eD0c33fnsD..NS5.zeiVzWFjd46', '05-07-2022', 'avator17626867643.jpg', 'user', '1');
 
 -- --------------------------------------------------------
 
@@ -1163,13 +1222,15 @@ INSERT INTO `tbl_users` (`id`, `first_name`, `last_name`, `email`, `username`, `
 -- Structure de la table `tbl_user_plans`
 --
 
-CREATE TABLE `tbl_user_plans` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_user_plans`;
+CREATE TABLE IF NOT EXISTS `tbl_user_plans` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` varchar(255) NOT NULL,
   `plan_name` varchar(255) NOT NULL,
   `purchase_date` varchar(255) NOT NULL,
   `expire_date` varchar(255) NOT NULL,
-  `max_size` int(11) NOT NULL DEFAULT '480'
+  `max_size` int(11) NOT NULL DEFAULT '480',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1178,12 +1239,14 @@ CREATE TABLE `tbl_user_plans` (
 -- Structure de la table `tbl_views`
 --
 
-CREATE TABLE `tbl_views` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_views`;
+CREATE TABLE IF NOT EXISTS `tbl_views` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `item` varchar(255) NOT NULL,
   `ip` varchar(255) NOT NULL,
-  `view_date` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `view_date` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=211 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tbl_views`
@@ -1407,7 +1470,8 @@ INSERT INTO `tbl_views` (`id`, `item`, `ip`, `view_date`) VALUES
 -- Structure de la table `tbl_web_info`
 --
 
-CREATE TABLE `tbl_web_info` (
+DROP TABLE IF EXISTS `tbl_web_info`;
+CREATE TABLE IF NOT EXISTS `tbl_web_info` (
   `name` varchar(50) NOT NULL,
   `icon` varchar(255) NOT NULL,
   `logo` varchar(255) NOT NULL,
@@ -1422,7 +1486,8 @@ CREATE TABLE `tbl_web_info` (
   `iso` varchar(255) NOT NULL DEFAULT 'USD',
   `guest_view` varchar(255) NOT NULL DEFAULT '1',
   `item_detail_bg` varchar(255) NOT NULL DEFAULT 'details.jpg',
-  `custom_script` longtext NOT NULL
+  `custom_script` longtext NOT NULL,
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -1431,305 +1496,6 @@ CREATE TABLE `tbl_web_info` (
 
 INSERT INTO `tbl_web_info` (`name`, `icon`, `logo`, `email`, `phone`, `timezone`, `top_text`, `keywords`, `description`, `auth_bg`, `currency`, `iso`, `guest_view`, `item_detail_bg`, `custom_script`) VALUES
 ('BuscoPhylo', 'logo.png', '<img src=\"img/logo-1.png\" style=\"height: 90px;\" />', 'slimane.khayi@inra.ma', '', 'Africa/Dar_es_Salaam', '', 'Busco', '', 'TreeA.png', NULL, '', '1', 'details.jpg', '');
-
---
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `tbl_about`
---
-ALTER TABLE `tbl_about`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_alerts`
---
-ALTER TABLE `tbl_alerts`
-  ADD PRIMARY KEY (`code`);
-
---
--- Index pour la table `tbl_comments`
---
-ALTER TABLE `tbl_comments`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_countries`
---
-ALTER TABLE `tbl_countries`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_coupons`
---
-ALTER TABLE `tbl_coupons`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_episodes`
---
-ALTER TABLE `tbl_episodes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_episode_subs`
---
-ALTER TABLE `tbl_episode_subs`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_favourites`
---
-ALTER TABLE `tbl_favourites`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_genres`
---
-ALTER TABLE `tbl_genres`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_items`
---
-ALTER TABLE `tbl_items`
-  ADD PRIMARY KEY (`c_id`),
-  ADD UNIQUE KEY `item_id` (`item_id`);
-
---
--- Index pour la table `tbl_paypal`
---
-ALTER TABLE `tbl_paypal`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_plans`
---
-ALTER TABLE `tbl_plans`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_privacy`
---
-ALTER TABLE `tbl_privacy`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_reset_tokens`
---
-ALTER TABLE `tbl_reset_tokens`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_reviews`
---
-ALTER TABLE `tbl_reviews`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_sessions`
---
-ALTER TABLE `tbl_sessions`
-  ADD PRIMARY KEY (`user`);
-
---
--- Index pour la table `tbl_single_links`
---
-ALTER TABLE `tbl_single_links`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_single_subs`
---
-ALTER TABLE `tbl_single_subs`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_smtp`
---
-ALTER TABLE `tbl_smtp`
-  ADD PRIMARY KEY (`server`);
-
---
--- Index pour la table `tbl_stripe`
---
-ALTER TABLE `tbl_stripe`
-  ADD PRIMARY KEY (`pub_key`);
-
---
--- Index pour la table `tbl_time`
---
-ALTER TABLE `tbl_time`
-  ADD PRIMARY KEY (`item_id`);
-
---
--- Index pour la table `tbl_timezones`
---
-ALTER TABLE `tbl_timezones`
-  ADD PRIMARY KEY (`zone_id`),
-  ADD KEY `idx_country_code` (`country_code`),
-  ADD KEY `idx_zone_name` (`zone_name`);
-
---
--- Index pour la table `tbl_transactions`
---
-ALTER TABLE `tbl_transactions`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_used_coupons`
---
-ALTER TABLE `tbl_used_coupons`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_users`
---
-ALTER TABLE `tbl_users`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_user_plans`
---
-ALTER TABLE `tbl_user_plans`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_views`
---
-ALTER TABLE `tbl_views`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `tbl_web_info`
---
-ALTER TABLE `tbl_web_info`
-  ADD PRIMARY KEY (`name`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `tbl_about`
---
-ALTER TABLE `tbl_about`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `tbl_comments`
---
-ALTER TABLE `tbl_comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_countries`
---
-ALTER TABLE `tbl_countries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
-
---
--- AUTO_INCREMENT pour la table `tbl_coupons`
---
-ALTER TABLE `tbl_coupons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_episodes`
---
-ALTER TABLE `tbl_episodes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_episode_subs`
---
-ALTER TABLE `tbl_episode_subs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_favourites`
---
-ALTER TABLE `tbl_favourites`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_genres`
---
-ALTER TABLE `tbl_genres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_items`
---
-ALTER TABLE `tbl_items`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_paypal`
---
-ALTER TABLE `tbl_paypal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `tbl_privacy`
---
-ALTER TABLE `tbl_privacy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `tbl_reset_tokens`
---
-ALTER TABLE `tbl_reset_tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_reviews`
---
-ALTER TABLE `tbl_reviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_single_links`
---
-ALTER TABLE `tbl_single_links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_single_subs`
---
-ALTER TABLE `tbl_single_subs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_timezones`
---
-ALTER TABLE `tbl_timezones`
-  MODIFY `zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=426;
-
---
--- AUTO_INCREMENT pour la table `tbl_transactions`
---
-ALTER TABLE `tbl_transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_used_coupons`
---
-ALTER TABLE `tbl_used_coupons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_user_plans`
---
-ALTER TABLE `tbl_user_plans`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tbl_views`
---
-ALTER TABLE `tbl_views`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-
+error_reporting(0);
+ini_set('display_errors', 0);
 
 require_once('db/config.php');
 require_once('const/web-info.php');

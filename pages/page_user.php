@@ -218,7 +218,7 @@ $dir = "./";
 													</td>
 													<td width="100">
 														<div class="main__table-text">
-													<a href="/item/<?php echo $row[2]; ?>/<?php echo $row[1]; ?>" class="delete_link">
+													<a href="./item/<?php echo $row[2]; ?>/<?php echo $row[1]; ?>" class="delete_link">
 														View
 													</a></div>
 												</td>

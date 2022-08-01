@@ -26,7 +26,7 @@
 }
           </style>
         <div class="footer__flixtv">
-          <img src="/img/logo-4.png" id="logo" style="height:100px;" />
+          <img src="./img/logo-4.png" id="logo" style="height:100px;" />
         </div>
       </div>
 
@@ -49,7 +49,7 @@
       
       <div class="col-6 col-md-4 col-lg-3 col-xl-2 order-2 order-lg-3 order-md-4 order-xl-4">
         <div class="footer__flixtv">
-          <figure><center><img src="/img/logo.png" id="inra" /></center></figure>
+          <figure><center><img src="./img/logo.png" id="inra" /></center></figure>
         </div>
       </div>
       

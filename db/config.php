@@ -3,10 +3,10 @@
 DEFINE('DBHost','localhost');
 
 //Database Username:
-DEFINE('DBUser', 'busco_laravel');
+DEFINE('DBUser', 'root');
 
 //Database Password:
-DEFINE('DBPass','inra.2016');
+DEFINE('DBPass','');
 
 //Database Name:
 DEFINE('DBName','busco_laravel');
