@@ -1,0 +1,16 @@
+#                                                                                                                                                                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                                                                                                                                                        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                                                                                                                                                ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NG-25720_PPCC_MCI_lib436635_7080_3_1_(paired)_trimmed_(paired)_mapping_-_Extracted_nucleotide_sequences_[NG-25720_PPCC_MCI_lib436635_7080_3_1]_(single)_contig_8_4   -            368 3001at2085           -            273   2.1e-77  255.6  19.5   1   2   1.6e-63   6.8e-61  201.5  14.8     1   211     3   246     3   253 0.85 # 2006 # 3109 # -1 # ID=8_4;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.214
+NG-25720_PPCC_MCI_lib436635_7080_3_1_(paired)_trimmed_(paired)_mapping_-_Extracted_nucleotide_sequences_[NG-25720_PPCC_MCI_lib436635_7080_3_1]_(single)_contig_8_4   -            368 3001at2085           -            273   2.1e-77  255.6  19.5   2   2   2.4e-19     1e-16   56.6   0.1   210   267   275   337   269   341 0.88 # 2006 # 3109 # -1 # ID=8_4;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.214
+NG-25720_PPCC_MCI_lib436635_7080_3_1_(paired)_trimmed_(paired)_mapping_-_Extracted_nucleotide_sequences_[NG-25720_PPCC_MCI_lib436635_7080_3_1]_(single)_contig_17_20 -            141 3001at2085           -            273   1.8e-11   39.4   1.3   1   1     6e-14   2.5e-11   38.9   1.3     1    78     1    77     1    90 0.73 # 24331 # 24753 # 1 # ID=17_20;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.220
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/3001at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_PPCC_MCI/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_PPCC_MCI/run_mycoplasmatales_odb10/hmmer_output/3001at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/3001at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_PPCC_MCI/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:28:03 2022
+# [ok]

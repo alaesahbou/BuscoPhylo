@@ -1,0 +1,28 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+JFDO01000016.1_13    -            909 157at2085            -            637  7.2e-223  737.0  35.4   1   4   9.5e-90   1.7e-87  289.8   2.6     1   243    18   297    18   307 0.81 # 15331 # 18057 # 1 # ID=16_13;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.253
+JFDO01000016.1_13    -            909 157at2085            -            637  7.2e-223  737.0  35.4   2   4  7.7e-128  1.4e-125  415.7   5.0   226   539   308   678   296   688 0.87 # 15331 # 18057 # 1 # ID=16_13;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.253
+JFDO01000016.1_13    -            909 157at2085            -            637  7.2e-223  737.0  35.4   3   4   4.3e-16   7.6e-14   46.5   6.5   522   600   692   782   671   808 0.80 # 15331 # 18057 # 1 # ID=16_13;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.253
+JFDO01000016.1_13    -            909 157at2085            -            637  7.2e-223  737.0  35.4   4   4     0.037       6.5    0.5   0.6   602   637   854   889   807   889 0.68 # 15331 # 18057 # 1 # ID=16_13;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.253
+JFDO01000004.1_10    -            873 157at2085            -            637   1.6e-56  187.5  48.6   1   3   1.4e-55   2.5e-53  177.0  25.3    12   540    25   610    19   624 0.72 # 7615 # 10233 # 1 # ID=4_10;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.230
+JFDO01000004.1_10    -            873 157at2085            -            637   1.6e-56  187.5  48.6   2   3   1.5e-07   2.6e-05   18.3   8.2   520   601   621   710   604   747 0.75 # 7615 # 10233 # 1 # ID=4_10;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.230
+JFDO01000004.1_10    -            873 157at2085            -            637   1.6e-56  187.5  48.6   3   3      0.27        48   -2.4   4.0   519   578   765   826   713   849 0.61 # 7615 # 10233 # 1 # ID=4_10;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.230
+JFDO01000026.1_4     -            805 157at2085            -            637   2.5e-39  130.7   9.9   1   4   3.2e-17   5.7e-15   50.2   0.7    10   162    17   173     9   178 0.84 # 2520 # 4934 # -1 # ID=26_4;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.263
+JFDO01000026.1_4     -            805 157at2085            -            637   2.5e-39  130.7   9.9   2   4     0.002      0.35    4.6   0.0   218   264   311   357   255   373 0.82 # 2520 # 4934 # -1 # ID=26_4;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.263
+JFDO01000026.1_4     -            805 157at2085            -            637   2.5e-39  130.7   9.9   3   4   1.6e-07   2.7e-05   18.2   0.0   315   363   392   441   386   449 0.76 # 2520 # 4934 # -1 # ID=26_4;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.263
+JFDO01000026.1_4     -            805 157at2085            -            637   2.5e-39  130.7   9.9   4   4   2.3e-20     4e-18   60.6   0.6   438   610   560   741   495   762 0.75 # 2520 # 4934 # -1 # ID=26_4;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.263
+JFDO01000007.1_5     -            510 157at2085            -            637     4e-25   83.7   6.2   1   2   1.5e-15   2.7e-13   44.7   0.2    32   155    12   136     2   146 0.79 # 7038 # 8567 # -1 # ID=7_5;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.233
+JFDO01000007.1_5     -            510 157at2085            -            637     4e-25   83.7   6.2   2   2     2e-14   3.5e-12   41.0   1.5   444   565   287   408   279   464 0.75 # 7038 # 8567 # -1 # ID=7_5;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.233
+JFDO01000004.1_156   -            442 157at2085            -            637   9.6e-08   26.3  18.1   1   2   0.00022     0.039    7.8   0.5    16    86    10    81     4   144 0.72 # 194453 # 195778 # -1 # ID=4_156;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.206
+JFDO01000004.1_156   -            442 157at2085            -            637   9.6e-08   26.3  18.1   2   2   7.1e-09   1.2e-06   22.7  11.4   448   604   252   419   208   436 0.72 # 194453 # 195778 # -1 # ID=4_156;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.206
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/157at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/run_mycoplasmatales_odb10/hmmer_output/157at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/157at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:26:19 2022
+# [ok]

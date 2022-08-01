@@ -1,0 +1,20 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+JFDO01000004.1_156   -            442 1830at2085           -            299    2e-101  334.8  35.8   1   3   2.6e-37   7.6e-35  116.3   8.4     1   119    20   157    20   166 0.83 # 194453 # 195778 # -1 # ID=4_156;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.206
+JFDO01000004.1_156   -            442 1830at2085           -            299    2e-101  334.8  35.8   2   3   3.9e-68   1.2e-65  217.4   9.2   114   269   171   326   163   360 0.88 # 194453 # 195778 # -1 # ID=4_156;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.206
+JFDO01000004.1_156   -            442 1830at2085           -            299    2e-101  334.8  35.8   3   3   3.2e-05    0.0094   10.9   4.6   243   298   369   440   329   441 0.55 # 194453 # 195778 # -1 # ID=4_156;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.206
+JFDO01000007.1_5     -            510 1830at2085           -            299   1.7e-08   29.8  11.2   1   3   5.6e-06    0.0016   13.4   0.8     2    86     5    98     4   129 0.74 # 7038 # 8567 # -1 # ID=7_5;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.233
+JFDO01000007.1_5     -            510 1830at2085           -            299   1.7e-08   29.8  11.2   2   3   2.1e-08     6e-06   21.4   0.1   194   253   289   349   276   385 0.73 # 7038 # 8567 # -1 # ID=7_5;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.233
+JFDO01000007.1_5     -            510 1830at2085           -            299   1.7e-08   29.8  11.2   3   3     0.064        19    0.1   1.0    43    86   394   440   375   460 0.59 # 7038 # 8567 # -1 # ID=7_5;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.233
+JFDO01000016.1_13    -            909 1830at2085           -            299   1.4e-05   20.2   2.9   1   1   8.5e-08   2.5e-05   19.4   0.0   200   270   590   663   564   684 0.78 # 15331 # 18057 # 1 # ID=16_13;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.253
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1830at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/run_mycoplasmatales_odb10/hmmer_output/1830at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1830at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:26:19 2022
+# [ok]

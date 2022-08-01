@@ -1,0 +1,18 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+FR668087.1_95        -            526 887at2085            -            410  4.1e-202  667.1   5.0   1   2  1.8e-204  4.1e-202  667.1   5.0    10   409    25   449     6   450 0.93 # 109575 # 111152 # 1 # ID=1_95;partial=00;start_type=ATG;rbs_motif=AGGAGG;rbs_spacer=5-10bp;gc_cont=0.298
+FR668087.1_95        -            526 887at2085            -            410  4.1e-202  667.1   5.0   2   2      0.92   2.1e+02   -3.8   0.7   360   401   462   504   457   506 0.65 # 109575 # 111152 # 1 # ID=1_95;partial=00;start_type=ATG;rbs_motif=AGGAGG;rbs_spacer=5-10bp;gc_cont=0.298
+FR668087.1_169       -            516 887at2085            -            410   2.1e-95  315.6   6.1   1   1   1.3e-97   2.9e-95  315.2   6.1    86   403   105   422    64   434 0.86 # 208886 # 210433 # 1 # ID=1_169;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.251
+FR668087.1_97        -            477 887at2085            -            410   4.8e-29   97.1   0.2   1   1   4.2e-31   9.5e-29   96.1   0.2    47   386    59   417    10   423 0.80 # 112005 # 113435 # 1 # ID=1_97;partial=00;start_type=ATG;rbs_motif=AGGAGG;rbs_spacer=3-4bp;gc_cont=0.303
+FR668087.1_170       -            460 887at2085            -            410   9.5e-14   46.7   0.7   1   1   5.4e-16   1.2e-13   46.4   0.7    50   359    49   372     5   408 0.76 # 210433 # 211812 # 1 # ID=1_170;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.257
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/887at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/M.leachii_990146/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/M.leachii_990146/run_mycoplasmatales_odb10/hmmer_output/887at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/887at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/M.leachii_990146/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:28:33 2022
+# [ok]

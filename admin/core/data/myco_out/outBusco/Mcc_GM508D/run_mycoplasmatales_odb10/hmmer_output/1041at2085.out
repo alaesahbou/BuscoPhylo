@@ -1,0 +1,16 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+JXQB01000001.1_524   -            669 1041at2085           -            492  5.9e-140  462.9  43.6   1   3  2.7e-111  2.3e-108  358.7  18.2     4   328     9   391     6   406 0.85 # 662266 # 664272 # 1 # ID=1_524;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.230
+JXQB01000001.1_524   -            669 1041at2085           -            492  5.9e-140  462.9  43.6   2   3   9.9e-25   8.4e-22   73.2  11.7   323   445   416   572   412   579 0.78 # 662266 # 664272 # 1 # ID=1_524;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.230
+JXQB01000001.1_524   -            669 1041at2085           -            492  5.9e-140  462.9  43.6   3   3   1.9e-14   1.6e-11   39.3   0.3   442   492   594   648   577   648 0.85 # 662266 # 664272 # 1 # ID=1_524;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.230
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1041at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_GM508D/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_GM508D/run_mycoplasmatales_odb10/hmmer_output/1041at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1041at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_GM508D/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:27:33 2022
+# [ok]

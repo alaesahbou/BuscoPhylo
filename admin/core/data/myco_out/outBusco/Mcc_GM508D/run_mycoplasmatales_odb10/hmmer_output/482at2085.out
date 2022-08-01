@@ -1,0 +1,15 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+JXQB01000001.1_220   -            705 482at2085            -            524  8.3e-145  478.8  51.9   1   2   0.00031      0.26    5.3   1.0     8    61    33    89    30   106 0.73 # 292391 # 294505 # 1 # ID=1_220;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=3-4bp;gc_cont=0.213
+JXQB01000001.1_220   -            705 482at2085            -            524  8.3e-145  478.8  51.9   2   2  2.8e-145  2.4e-142  470.7  44.9    14   524   106   702    94   702 0.80 # 292391 # 294505 # 1 # ID=1_220;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=3-4bp;gc_cont=0.213
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/482at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_GM508D/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_GM508D/run_mycoplasmatales_odb10/hmmer_output/482at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/482at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_GM508D/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:27:40 2022
+# [ok]

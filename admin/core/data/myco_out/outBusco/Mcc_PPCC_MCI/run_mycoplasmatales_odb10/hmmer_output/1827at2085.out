@@ -1,0 +1,14 @@
+#                                                                                                                                                                                                                           --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                                                                                                                                                       accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                                                                                                                                               ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NG-25720_PPCC_MCI_lib436635_7080_3_1_(paired)_trimmed_(paired)_mapping_-_Extracted_nucleotide_sequences_[NG-25720_PPCC_MCI_lib436635_7080_3_1]_(single)_contig_17_1 -            410 1827at2085           -            388  1.3e-154  510.0   4.6   1   1  6.4e-157  5.5e-154  508.0   4.6    33   382     1   393     1   399 0.89 # 3 # 1232 # 1 # ID=17_1;partial=10;start_type=Edge;rbs_motif=None;rbs_spacer=None;gc_cont=0.285
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1827at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_PPCC_MCI/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_PPCC_MCI/run_mycoplasmatales_odb10/hmmer_output/1827at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1827at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_PPCC_MCI/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:28:01 2022
+# [ok]

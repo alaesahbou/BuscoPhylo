@@ -1,0 +1,27 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+FR668087.1_482       -            197 4324at2085           -            135   1.7e-37  124.2   4.7   1   1   2.4e-39   2.7e-37  123.5   3.8     3   124    16   159    14   168 0.85 # 591158 # 591748 # -1 # ID=1_482;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.223
+FR668087.1_528       -            436 4324at2085           -            135   1.8e-15   52.8  15.6   1   2   8.1e-09   9.1e-07   24.7   3.4    11   103     5   107     2   151 0.67 # 633083 # 634390 # -1 # ID=1_528;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.230
+FR668087.1_528       -            436 4324at2085           -            135   1.8e-15   52.8  15.6   2   2   8.6e-11   9.6e-09   31.1   4.3     8   122   173   308   168   318 0.66 # 633083 # 634390 # -1 # ID=1_528;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.230
+FR668087.1_786       -            453 4324at2085           -            135   1.7e-09   33.5   6.0   1   1   1.2e-10   1.3e-08   30.6   6.0     4   123   212   347   209   362 0.67 # 903400 # 904758 # -1 # ID=1_786;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.244
+FR668087.1_312       -            302 4324at2085           -            135   1.9e-08   30.1   4.9   1   3   1.7e-10   1.9e-08   30.1   4.9    12   122     9   138     2   162 0.74 # 377951 # 378856 # -1 # ID=1_312;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.221
+FR668087.1_312       -            302 4324at2085           -            135   1.9e-08   30.1   4.9   2   3      0.45        50   -0.4   0.2    65   107   159   201   146   231 0.67 # 377951 # 378856 # -1 # ID=1_312;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.221
+FR668087.1_312       -            302 4324at2085           -            135   1.9e-08   30.1   4.9   3   3       1.6   1.8e+02   -2.2   0.0   101   116   242   257   211   275 0.58 # 377951 # 378856 # -1 # ID=1_312;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.221
+FR668087.1_511       -            317 4324at2085           -            135   3.5e-08   29.2   0.3   1   2      0.19        21    0.8   0.8    67   113    66   117    44   128 0.65 # 618696 # 619646 # -1 # ID=1_511;partial=00;start_type=ATG;rbs_motif=AGxAG;rbs_spacer=5-10bp;gc_cont=0.241
+FR668087.1_511       -            317 4324at2085           -            135   3.5e-08   29.2   0.3   2   2   3.1e-10   3.5e-08   29.2   0.3     5    72   119   190   115   235 0.84 # 618696 # 619646 # -1 # ID=1_511;partial=00;start_type=ATG;rbs_motif=AGxAG;rbs_spacer=5-10bp;gc_cont=0.241
+FR668087.1_230       -            368 4324at2085           -            135   1.3e-06   24.1  10.3   1   2     0.017       1.9    4.2   2.4    68   120    62   114    46   133 0.81 # 281835 # 282938 # -1 # ID=1_230;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.196
+FR668087.1_230       -            368 4324at2085           -            135   1.3e-06   24.1  10.3   2   2   1.2e-08   1.4e-06   24.1   0.8     3    31   150   178   148   203 0.86 # 281835 # 282938 # -1 # ID=1_230;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.196
+FR668087.1_772       -            365 4324at2085           -            135   0.00071   15.3   0.0   1   1   2.2e-05    0.0025   13.6   0.0    12    43     5    35     3    68 0.80 # 886723 # 887817 # -1 # ID=1_772;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.278
+FR668087.1_340       -            434 4324at2085           -            135   0.00074   15.2   1.5   1   2   6.3e-05    0.0071   12.1   0.8    11   109   161   267   156   321 0.73 # 410835 # 412136 # -1 # ID=1_340;partial=00;start_type=ATG;rbs_motif=AGxAGG/AGGxGG;rbs_spacer=5-10bp;gc_cont=0.265
+FR668087.1_340       -            434 4324at2085           -            135   0.00074   15.2   1.5   2   2      0.33        37    0.0   0.2    45    59   299   314   297   356 0.60 # 410835 # 412136 # -1 # ID=1_340;partial=00;start_type=ATG;rbs_motif=AGxAGG/AGGxGG;rbs_spacer=5-10bp;gc_cont=0.265
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/4324at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/M.leachii_990146/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/M.leachii_990146/run_mycoplasmatales_odb10/hmmer_output/4324at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/4324at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/M.leachii_990146/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:28:30 2022
+# [ok]

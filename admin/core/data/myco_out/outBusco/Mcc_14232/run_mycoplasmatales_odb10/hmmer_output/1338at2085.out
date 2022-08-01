@@ -1,0 +1,27 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+JFDO01000036.1_7     -            453 1338at2085           -            333  7.9e-102  336.4  38.5   1   2   1.4e-94   1.5e-92  305.9  34.9     1   309     5   358     5   401 0.83 # 4240 # 5598 # -1 # ID=36_7;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.234
+JFDO01000036.1_7     -            453 1338at2085           -            333  7.9e-102  336.4  38.5   2   2   3.7e-09   4.1e-07   25.1   0.9   283   333   398   452   370   452 0.67 # 4240 # 5598 # -1 # ID=36_7;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.234
+JFDO01000017.1_84    -            436 1338at2085           -            333   6.9e-41  136.1  26.3   1   2   1.7e-20   1.9e-18   62.4   4.8   179   278     6   103     2   136 0.77 # 96087 # 97394 # -1 # ID=17_84;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.226
+JFDO01000017.1_84    -            436 1338at2085           -            333   6.9e-41  136.1  26.3   2   2   8.5e-25   9.3e-23   76.5  14.5   161   269   159   271   117   351 0.87 # 96087 # 97394 # -1 # ID=17_84;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.226
+JFDO01000017.1_34    -            302 1338at2085           -            333   7.3e-19   63.7   6.0   1   1   6.6e-21   7.3e-19   63.7   6.0   179   300     9   126     2   158 0.85 # 39542 # 40447 # -1 # ID=17_34;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.222
+JFDO01000004.1_24    -            197 1338at2085           -            333   2.2e-09   32.6   0.1   1   2     2e-11   2.2e-09   32.6   0.1   165   232    11    78     3   107 0.79 # 22344 # 22934 # 1 # ID=4_24;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.223
+JFDO01000004.1_24    -            197 1338at2085           -            333   2.2e-09   32.6   0.1   2   2      0.14        15    0.2   0.7   153   197   150   193   121   196 0.67 # 22344 # 22934 # 1 # ID=4_24;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.223
+JFDO01000017.1_69    -            317 1338at2085           -            333   8.9e-08   27.3   8.9   1   1   8.9e-10   9.8e-08   27.2   8.2   148   279    85   225    47   280 0.67 # 84564 # 85514 # -1 # ID=17_69;partial=00;start_type=ATG;rbs_motif=AGxAG;rbs_spacer=5-10bp;gc_cont=0.240
+JFDO01000017.1_60    -            434 1338at2085           -            333   7.6e-05   17.6   1.2   1   1   1.9e-06   0.00021   16.2   0.2   178   301   161   288   151   311 0.74 # 73861 # 75162 # -1 # ID=17_60;partial=00;start_type=ATG;rbs_motif=AGxAGG/AGGxGG;rbs_spacer=5-10bp;gc_cont=0.262
+JFDO01000035.1_12    -            365 1338at2085           -            333   8.9e-05   17.4   8.9   1   3   1.8e-06    0.0002   16.3   0.2   176   199     2    25     1    31 0.91 # 13111 # 14205 # -1 # ID=35_12;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.273
+JFDO01000035.1_12    -            365 1338at2085           -            333   8.9e-05   17.4   8.9   2   3     0.002      0.22    6.3   0.5   224   325    67   168    57   175 0.83 # 13111 # 14205 # -1 # ID=35_12;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.273
+JFDO01000035.1_12    -            365 1338at2085           -            333   8.9e-05   17.4   8.9   3   3      0.67        73   -2.0   0.1   264   291   231   258   195   272 0.65 # 13111 # 14205 # -1 # ID=35_12;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.273
+JFDO01000004.1_143   -            513 1338at2085           -            333   0.00033   15.6   2.5   1   2   3.2e-06   0.00036   15.4   0.1   164   199    17    52     7    59 0.87 # 175461 # 176999 # -1 # ID=4_143;partial=00;start_type=ATG;rbs_motif=AGGAGG;rbs_spacer=3-4bp;gc_cont=0.261
+JFDO01000004.1_143   -            513 1338at2085           -            333   0.00033   15.6   2.5   2   2      0.33        36   -1.0   0.4   245   285   212   252   162   300 0.49 # 175461 # 176999 # -1 # ID=4_143;partial=00;start_type=ATG;rbs_motif=AGGAGG;rbs_spacer=3-4bp;gc_cont=0.261
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1338at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/run_mycoplasmatales_odb10/hmmer_output/1338at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1338at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:26:18 2022
+# [ok]

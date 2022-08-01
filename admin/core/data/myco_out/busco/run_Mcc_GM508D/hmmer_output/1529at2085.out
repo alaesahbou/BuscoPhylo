@@ -1,0 +1,21 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+JXQB01000001.1_54    -            475 1529at2085           -            392  1.4e-159  526.9  12.6   1   2  9.1e-160  1.9e-157  519.9   7.5     2   349     3   380     2   388 0.91 # 77833 # 79257 # -1 # ID=1_54;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.246
+JXQB01000001.1_54    -            475 1529at2085           -            392  1.4e-159  526.9  12.6   2   2   0.00016     0.034    8.8   0.5   334   385   384   446   367   451 0.75 # 77833 # 79257 # -1 # ID=1_54;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.246
+JXQB01000001.1_412   -            423 1529at2085           -            392     5e-10   34.6   0.0   1   1   4.5e-12   9.5e-10   33.6   0.0    98   273   222   412   167   415 0.76 # 517517 # 518785 # 1 # ID=1_412;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.261
+JXQB01000001.1_704   -            457 1529at2085           -            392   4.6e-08   28.1   3.4   1   2     2e-05    0.0041   11.8   0.7    76   161   137   224   116   247 0.83 # 861083 # 862453 # 1 # ID=1_704;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.244
+JXQB01000001.1_704   -            457 1529at2085           -            392   4.6e-08   28.1   3.4   2   2     6e-07   0.00013   16.8   0.1   268   338   358   440   312   456 0.74 # 861083 # 862453 # 1 # ID=1_704;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.244
+JXQB01000001.1_108   -            640 1529at2085           -            392   5.9e-08   27.7   0.3   1   3     0.093        20   -0.3   0.0   319   342   220   243   206   249 0.87 # 149086 # 151005 # -1 # ID=1_108;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=3-4bp;gc_cont=0.236
+JXQB01000001.1_108   -            640 1529at2085           -            392   5.9e-08   27.7   0.3   2   3   0.00086      0.18    6.4   0.0    38   140   260   364   250   372 0.83 # 149086 # 151005 # -1 # ID=1_108;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=3-4bp;gc_cont=0.236
+JXQB01000001.1_108   -            640 1529at2085           -            392   5.9e-08   27.7   0.3   3   3   8.2e-07   0.00017   16.3   0.1   267   329   535   611   481   622 0.72 # 149086 # 151005 # -1 # ID=1_108;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=3-4bp;gc_cont=0.236
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1529at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_GM508D/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_GM508D/run_mycoplasmatales_odb10/hmmer_output/1529at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1529at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_GM508D/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:27:35 2022
+# [ok]

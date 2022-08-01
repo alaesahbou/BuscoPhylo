@@ -1,0 +1,15 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+LBMF01000002.1_113   -            897 163at2085            -            649  4.7e-230  760.8  35.5   1   2  8.3e-230  6.5e-227  750.5  32.0     1   636     4   755     4   760 0.83 # 137987 # 140677 # -1 # ID=2_113;partial=00;start_type=ATG;rbs_motif=AGGAGG;rbs_spacer=3-4bp;gc_cont=0.244
+LBMF01000002.1_113   -            897 163at2085            -            649  4.7e-230  760.8  35.5   2   2    0.0005      0.39    4.5   0.1   610   649   855   892   820   892 0.83 # 137987 # 140677 # -1 # ID=2_113;partial=00;start_type=ATG;rbs_motif=AGGAGG;rbs_spacer=3-4bp;gc_cont=0.244
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/163at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_14DL0024/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_14DL0024/run_mycoplasmatales_odb10/hmmer_output/163at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/163at2085.hmm /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_14DL0024/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Sun Jul 31 23:53:45 2022
+# [ok]

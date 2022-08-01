@@ -1,0 +1,61 @@
+{
+    "parameters": {
+        "out_path": "/disk3/default/V2/admin/core/data/myco_out/outBusco",
+        "cpu": "1",
+        "force": "False",
+        "restart": "False",
+        "quiet": "False",
+        "download_path": "/root/busco_downloads",
+        "datasets_version": "odb10",
+        "offline": "False",
+        "download_base_url": "https://busco-data.ezlab.org/v5/data/",
+        "auto-lineage": "False",
+        "auto-lineage-prok": "False",
+        "auto-lineage-euk": "False",
+        "update-data": "False",
+        "use_augustus": "False",
+        "batch_mode": "False",
+        "tar": "False",
+        "in": "/disk3/default/V2/admin/core/data/myco_out/Mcc_PPCC_MCI.fa",
+        "out": "Mcc_PPCC_MCI",
+        "mode": "prok_genome",
+        "lineage_dataset": "/root/busco_downloads/lineages/mycoplasmatales_odb10",
+        "main_out": "/disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_PPCC_MCI",
+        "lineage_results_dir": "run_mycoplasmatales_odb10",
+        "domain": "prokaryota",
+        "prodigal_genetic_code": "4",
+        "ambiguous_cd_range_lower": "0.73",
+        "ambiguous_cd_range_upper": "0.8",
+        "contig_break": "10",
+        "scaffold_composition": "False",
+        "gene_predictor": "prodigal"
+    },
+    "lineage_dataset": {
+        "name": "mycoplasmatales_odb10",
+        "creation_date": "2020-03-06",
+        "number_of_buscos": "174",
+        "number_of_species": "79"
+    },
+    "versions": {
+        "hmmsearch": 3.1,
+        "bbtools": "37.88",
+        "prodigal": "2.6.2",
+        "busco": "5.4.1"
+    },
+    "results": {
+        "one_line_summary": "C:98.9%[S:98.9%,D:0.0%],F:0.0%,M:1.1%,n:174",
+        "Complete": 98.9,
+        "Single copy": 98.9,
+        "Multi copy": 0.0,
+        "Fragmented": 0.0,
+        "Missing": 1.1,
+        "n_markers": 174,
+        "domain": "prokaryota",
+        "Number of scaffolds": "95",
+        "Number of contigs": "102",
+        "Total length": "960789",
+        "Percent gaps": "0.101%",
+        "Scaffold N50": "48046",
+        "Contigs N50": "48046"
+    }
+}

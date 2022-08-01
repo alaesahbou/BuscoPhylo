@@ -1,0 +1,18 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+LBMF01000002.1_23    -            123 5328at2085           -             93   2.1e-32  106.7  13.3   1   2   4.7e-16   1.8e-13   46.0   0.9     3    44     2    43     1    51 0.94 # 24825 # 25193 # 1 # ID=2_23;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.336
+LBMF01000002.1_23    -            123 5328at2085           -             93   2.1e-32  106.7  13.3   2   2   3.1e-22   1.2e-19   65.8   5.8    34    93    55   119    46   119 0.91 # 24825 # 25193 # 1 # ID=2_23;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.336
+LBMF01000003.1_109   -            296 5328at2085           -             93    0.0022   13.7   0.5   1   3   5.6e-06    0.0022   13.7   0.5    47    76     6    35     1    66 0.90 # 151762 # 152649 # 1 # ID=3_109;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.271
+LBMF01000003.1_109   -            296 5328at2085           -             93    0.0022   13.7   0.5   2   3      0.51     2e+02   -2.2   0.1    70    84   196   210   178   242 0.67 # 151762 # 152649 # 1 # ID=3_109;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.271
+LBMF01000003.1_109   -            296 5328at2085           -             93    0.0022   13.7   0.5   3   3       0.5   1.9e+02   -2.2   0.0    34    35   250   251   224   281 0.57 # 151762 # 152649 # 1 # ID=3_109;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.271
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/5328at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_14DL0024/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_14DL0024/run_mycoplasmatales_odb10/hmmer_output/5328at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/5328at2085.hmm /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_14DL0024/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Sun Jul 31 23:53:50 2022
+# [ok]

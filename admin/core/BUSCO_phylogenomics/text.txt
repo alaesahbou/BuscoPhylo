@@ -1,0 +1,4 @@
+file1_time=$(date +%s -d"$( ls -l file1 | awk ' { print $(NF-3)" "$(NF-2)" "$(NF-1); }')")
+file2_time=$(date +%s -d"$( ls -l file1 | awk ' { print $(NF-3)" "$(NF-2)" "$(NF-1); }')")
+(( diff_time =  file2_time - file1_time ))
+echo $diff_time

@@ -1,0 +1,15 @@
+#                                                                                                                                                                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                                                                                                                                                        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                                                                                                                                                ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NG-25720_PPCC_MCI_lib436635_7080_3_1_(paired)_trimmed_(paired)_mapping_-_Extracted_nucleotide_sequences_[NG-25720_PPCC_MCI_lib436635_7080_3_1]_(single)_contig_13_58 -            428 1451at2085           -            332  8.4e-112  369.0   7.4   1   1  1.6e-113  6.7e-111  366.1   7.4     3   332    20   423    18   423 0.86 # 75061 # 76344 # 1 # ID=13_58;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=3-4bp;gc_cont=0.256
+NG-25720_PPCC_MCI_lib436635_7080_3_1_(paired)_trimmed_(paired)_mapping_-_Extracted_nucleotide_sequences_[NG-25720_PPCC_MCI_lib436635_7080_3_1]_(single)_contig_17_8  -            327 1451at2085           -            332    0.0035   12.0   0.0   1   1   1.6e-05     0.007   11.0   0.0    32    57    91   116    82   129 0.86 # 7030 # 8010 # 1 # ID=17_8;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.306
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1451at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_PPCC_MCI/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_PPCC_MCI/run_mycoplasmatales_odb10/hmmer_output/1451at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/1451at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_PPCC_MCI/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:28:00 2022
+# [ok]

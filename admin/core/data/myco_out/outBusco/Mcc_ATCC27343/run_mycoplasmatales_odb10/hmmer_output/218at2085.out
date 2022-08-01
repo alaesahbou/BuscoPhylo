@@ -1,0 +1,17 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+CP000123.1_703       -            723 218at2085            -            506  1.5e-134  445.2  54.7   1   4   7.2e-39     6e-36  119.9   2.7     2   111    10   140     9   152 0.83 # 832070 # 834238 # -1 # ID=1_703;partial=00;start_type=ATG;rbs_motif=AGxAG;rbs_spacer=11-12bp;gc_cont=0.228
+CP000123.1_703       -            723 218at2085            -            506  1.5e-134  445.2  54.7   2   4   2.1e-73   1.7e-70  233.8  30.8   109   369   187   483   166   498 0.78 # 832070 # 834238 # -1 # ID=1_703;partial=00;start_type=ATG;rbs_motif=AGxAG;rbs_spacer=11-12bp;gc_cont=0.228
+CP000123.1_703       -            723 218at2085            -            506  1.5e-134  445.2  54.7   3   4   7.9e-27   6.7e-24   80.1   5.8   338   454   479   617   448   654 0.68 # 832070 # 834238 # -1 # ID=1_703;partial=00;start_type=ATG;rbs_motif=AGxAG;rbs_spacer=11-12bp;gc_cont=0.228
+CP000123.1_703       -            723 218at2085            -            506  1.5e-134  445.2  54.7   4   4   4.1e-08   3.5e-05   18.4   0.2   453   496   659   704   650   711 0.86 # 832070 # 834238 # -1 # ID=1_703;partial=00;start_type=ATG;rbs_motif=AGxAG;rbs_spacer=11-12bp;gc_cont=0.228
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/218at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_ATCC27343/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_ATCC27343/run_mycoplasmatales_odb10/hmmer_output/218at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/218at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_ATCC27343/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:27:11 2022
+# [ok]

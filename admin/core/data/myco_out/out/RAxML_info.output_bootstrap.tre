@@ -1,0 +1,51 @@
+
+You are using a proportion of Invariable sites estimate, although I don't
+like it. The likelihood epsilon "-f e" will be automatically lowered to 0.001
+to avoid unfavorable effects caused by simultaneous optimization of alpha and P-Invar
+
+
+WARNING: RAxML is not checking sequences for duplicate seqs and sites with missing data!
+
+
+
+This is RAxML version 8.2.11 released by Alexandros Stamatakis on June 2017.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+RAxML Bipartition Computation: Drawing support values from trees in file RAxML_bootstrap.nwk onto tree in file RAxML_bestTree.nwk
+
+
+RAxML was called as follows:
+
+/usr/bin/raxmlHPC-PTHREADS-AVX -T 18 -f b -m PROTGAMMAILG -n output_bootstrap.tre -t RAxML_bestTree.nwk -z RAxML_bootstrap.nwk 
+
+
+
+
+Found 1 tree in File RAxML_bestTree.nwk
+
+
+
+Found 1000 trees in File RAxML_bootstrap.nwk
+
+
+
+Found 1 tree in File RAxML_bestTree.nwk
+
+
+
+Time for Computation of Bipartitions 0.015015
+Tree with bipartitions written to file:  /disk3/default/V2/admin/core/data/myco_out/out/RAxML_bipartitions.output_bootstrap.tre
+Tree with bipartitions as branch labels written to file:  /disk3/default/V2/admin/core/data/myco_out/out/RAxML_bipartitionsBranchLabels.output_bootstrap.tre
+Execution information file written to :  /disk3/default/V2/admin/core/data/myco_out/out/RAxML_info.output_bootstrap.tre

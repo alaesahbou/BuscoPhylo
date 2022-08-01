@@ -1,0 +1,17 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+FR668087.1_390       -            156 4100at2085           -            146   2.3e-82  269.8   3.5   1   1   5.7e-85   2.6e-82  269.7   3.5     1   146     9   154     9   154 1.00 # 471311 # 471778 # 1 # ID=1_390;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.269
+FR668087.1_673       -            303 4100at2085           -            146     0.017   10.8   5.4   1   3      0.01       4.6    2.9   0.1    38    80    16    56     9    66 0.85 # 778152 # 779060 # -1 # ID=1_673;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.175
+FR668087.1_673       -            303 4100at2085           -            146     0.017   10.8   5.4   2   3      0.37   1.7e+02   -2.2   0.0    21    39   147   165   135   172 0.70 # 778152 # 779060 # -1 # ID=1_673;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.175
+FR668087.1_673       -            303 4100at2085           -            146     0.017   10.8   5.4   3   3   0.00011     0.048    9.3   0.2    17    56   251   290   241   297 0.88 # 778152 # 779060 # -1 # ID=1_673;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.175
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/4100at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/M.leachii_990146/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/M.leachii_990146/run_mycoplasmatales_odb10/hmmer_output/4100at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/4100at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/M.leachii_990146/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:28:30 2022
+# [ok]

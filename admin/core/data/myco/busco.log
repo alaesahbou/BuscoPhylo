@@ -1,0 +1,270 @@
+2022-07-31 23:53:02 INFO:	***** Start a BUSCO v5.4.1 analysis, current time: 07/31/2022 23:53:02 *****
+2022-07-31 23:53:02 INFO:	Configuring BUSCO with local environment
+2022-07-31 23:53:02 INFO:	Mode is genome
+2022-07-31 23:53:02 INFO:	Downloading information on latest versions of BUSCO data...
+2022-07-31 23:53:14 INFO:	Input file is /disk3/default/V2/admin/core/data/myco/Mcc_14232.fa
+2022-07-31 23:53:14 INFO:	Running BUSCO using lineage dataset mycoplasmatales_odb10 (prokaryota, 2020-03-06)
+2022-07-31 23:53:14 INFO:	Running 1 job(s) on bbtools, starting at 07/31/2022 23:53:14
+2022-07-31 23:53:15 INFO:	[bbtools]	1 of 1 task(s) completed
+2022-07-31 23:53:15 INFO:	***** Run Prodigal on input to predict and extract genes *****
+2022-07-31 23:53:15 INFO:	Running Prodigal with genetic code 4 in single mode
+2022-07-31 23:53:15 INFO:	Running 1 job(s) on prodigal, starting at 07/31/2022 23:53:15
+2022-07-31 23:53:17 INFO:	[prodigal]	1 of 1 task(s) completed
+2022-07-31 23:53:17 INFO:	Genetic code 4 selected as optimal
+2022-07-31 23:53:17 INFO:	***** Run HMMER on gene sequences *****
+2022-07-31 23:53:17 INFO:	Running 174 job(s) on hmmsearch, starting at 07/31/2022 23:53:17
+2022-07-31 23:53:18 INFO:	[hmmsearch]	18 of 174 task(s) completed
+2022-07-31 23:53:20 INFO:	[hmmsearch]	35 of 174 task(s) completed
+2022-07-31 23:53:21 INFO:	[hmmsearch]	53 of 174 task(s) completed
+2022-07-31 23:53:21 INFO:	[hmmsearch]	70 of 174 task(s) completed
+2022-07-31 23:53:22 INFO:	[hmmsearch]	87 of 174 task(s) completed
+2022-07-31 23:53:23 INFO:	[hmmsearch]	105 of 174 task(s) completed
+2022-07-31 23:53:23 INFO:	[hmmsearch]	122 of 174 task(s) completed
+2022-07-31 23:53:24 INFO:	[hmmsearch]	140 of 174 task(s) completed
+2022-07-31 23:53:25 INFO:	[hmmsearch]	157 of 174 task(s) completed
+2022-07-31 23:53:26 INFO:	[hmmsearch]	174 of 174 task(s) completed
+2022-07-31 23:53:26 INFO:	Results:	C:99.4%[S:98.3%,D:1.1%],F:0.0%,M:0.6%,n:174	   
+
+2022-07-31 23:53:27 INFO:	
+
+	--------------------------------------------------
+	|Results from dataset mycoplasmatales_odb10       |
+	--------------------------------------------------
+	|C:99.4%[S:98.3%,D:1.1%],F:0.0%,M:0.6%,n:174      |
+	|173	Complete BUSCOs (C)                       |
+	|171	Complete and single-copy BUSCOs (S)       |
+	|2	Complete and duplicated BUSCOs (D)        |
+	|0	Fragmented BUSCOs (F)                     |
+	|1	Missing BUSCOs (M)                        |
+	|174	Total BUSCO groups searched               |
+	--------------------------------------------------
+2022-07-31 23:53:27 INFO:	BUSCO analysis done. Total running time: 12 seconds
+2022-07-31 23:53:27 INFO:	Results written in /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_14232
+2022-07-31 23:53:27 INFO:	For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+
+2022-07-31 23:53:27 INFO:	Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO
+2022-07-31 23:53:27 INFO:	***** Start a BUSCO v5.4.1 analysis, current time: 07/31/2022 23:53:27 *****
+2022-07-31 23:53:27 INFO:	Configuring BUSCO with local environment
+2022-07-31 23:53:27 INFO:	Mode is genome
+2022-07-31 23:53:27 INFO:	Downloading information on latest versions of BUSCO data...
+2022-07-31 23:53:40 INFO:	Input file is /disk3/default/V2/admin/core/data/myco/Mcc_14DL0024.fa
+2022-07-31 23:53:40 INFO:	Running BUSCO using lineage dataset mycoplasmatales_odb10 (prokaryota, 2020-03-06)
+2022-07-31 23:53:40 INFO:	Running 1 job(s) on bbtools, starting at 07/31/2022 23:53:40
+2022-07-31 23:53:41 INFO:	[bbtools]	1 of 1 task(s) completed
+2022-07-31 23:53:41 INFO:	***** Run Prodigal on input to predict and extract genes *****
+2022-07-31 23:53:41 INFO:	Running Prodigal with genetic code 4 in single mode
+2022-07-31 23:53:41 INFO:	Running 1 job(s) on prodigal, starting at 07/31/2022 23:53:41
+2022-07-31 23:53:42 INFO:	[prodigal]	1 of 1 task(s) completed
+2022-07-31 23:53:42 INFO:	Genetic code 4 selected as optimal
+2022-07-31 23:53:42 INFO:	***** Run HMMER on gene sequences *****
+2022-07-31 23:53:42 INFO:	Running 174 job(s) on hmmsearch, starting at 07/31/2022 23:53:42
+2022-07-31 23:53:44 INFO:	[hmmsearch]	18 of 174 task(s) completed
+2022-07-31 23:53:45 INFO:	[hmmsearch]	35 of 174 task(s) completed
+2022-07-31 23:53:46 INFO:	[hmmsearch]	53 of 174 task(s) completed
+2022-07-31 23:53:47 INFO:	[hmmsearch]	70 of 174 task(s) completed
+2022-07-31 23:53:48 INFO:	[hmmsearch]	87 of 174 task(s) completed
+2022-07-31 23:53:48 INFO:	[hmmsearch]	105 of 174 task(s) completed
+2022-07-31 23:53:49 INFO:	[hmmsearch]	122 of 174 task(s) completed
+2022-07-31 23:53:49 INFO:	[hmmsearch]	140 of 174 task(s) completed
+2022-07-31 23:53:50 INFO:	[hmmsearch]	157 of 174 task(s) completed
+2022-07-31 23:53:52 INFO:	[hmmsearch]	174 of 174 task(s) completed
+2022-07-31 23:53:52 INFO:	Results:	C:99.5%[S:98.9%,D:0.6%],F:0.0%,M:0.5%,n:174	   
+
+2022-07-31 23:53:52 INFO:	
+
+	--------------------------------------------------
+	|Results from dataset mycoplasmatales_odb10       |
+	--------------------------------------------------
+	|C:99.5%[S:98.9%,D:0.6%],F:0.0%,M:0.5%,n:174      |
+	|173	Complete BUSCOs (C)                       |
+	|172	Complete and single-copy BUSCOs (S)       |
+	|1	Complete and duplicated BUSCOs (D)        |
+	|0	Fragmented BUSCOs (F)                     |
+	|1	Missing BUSCOs (M)                        |
+	|174	Total BUSCO groups searched               |
+	--------------------------------------------------
+2022-07-31 23:53:52 INFO:	BUSCO analysis done. Total running time: 12 seconds
+2022-07-31 23:53:52 INFO:	Results written in /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_14DL0024
+2022-07-31 23:53:52 INFO:	For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+
+2022-07-31 23:53:52 INFO:	Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO
+2022-07-31 23:53:53 INFO:	***** Start a BUSCO v5.4.1 analysis, current time: 07/31/2022 23:53:53 *****
+2022-07-31 23:53:53 INFO:	Configuring BUSCO with local environment
+2022-07-31 23:53:53 INFO:	Mode is genome
+2022-07-31 23:53:53 INFO:	Downloading information on latest versions of BUSCO data...
+2022-07-31 23:54:05 INFO:	Input file is /disk3/default/V2/admin/core/data/myco/Mcc_ATCC27343.fa
+2022-07-31 23:54:05 INFO:	Running BUSCO using lineage dataset mycoplasmatales_odb10 (prokaryota, 2020-03-06)
+2022-07-31 23:54:05 INFO:	Running 1 job(s) on bbtools, starting at 07/31/2022 23:54:05
+2022-07-31 23:54:06 INFO:	[bbtools]	1 of 1 task(s) completed
+2022-07-31 23:54:06 INFO:	***** Run Prodigal on input to predict and extract genes *****
+2022-07-31 23:54:06 INFO:	Running Prodigal with genetic code 4 in single mode
+2022-07-31 23:54:06 INFO:	Running 1 job(s) on prodigal, starting at 07/31/2022 23:54:06
+2022-07-31 23:54:08 INFO:	[prodigal]	1 of 1 task(s) completed
+2022-07-31 23:54:08 INFO:	Genetic code 4 selected as optimal
+2022-07-31 23:54:08 INFO:	***** Run HMMER on gene sequences *****
+2022-07-31 23:54:08 INFO:	Running 174 job(s) on hmmsearch, starting at 07/31/2022 23:54:08
+2022-07-31 23:54:10 INFO:	[hmmsearch]	18 of 174 task(s) completed
+2022-07-31 23:54:11 INFO:	[hmmsearch]	35 of 174 task(s) completed
+2022-07-31 23:54:12 INFO:	[hmmsearch]	53 of 174 task(s) completed
+2022-07-31 23:54:12 INFO:	[hmmsearch]	70 of 174 task(s) completed
+2022-07-31 23:54:13 INFO:	[hmmsearch]	87 of 174 task(s) completed
+2022-07-31 23:54:14 INFO:	[hmmsearch]	105 of 174 task(s) completed
+2022-07-31 23:54:14 INFO:	[hmmsearch]	122 of 174 task(s) completed
+2022-07-31 23:54:15 INFO:	[hmmsearch]	140 of 174 task(s) completed
+2022-07-31 23:54:16 INFO:	[hmmsearch]	157 of 174 task(s) completed
+2022-07-31 23:54:17 INFO:	[hmmsearch]	174 of 174 task(s) completed
+2022-07-31 23:54:17 INFO:	Results:	C:98.3%[S:98.3%,D:0.0%],F:0.6%,M:1.1%,n:174	   
+
+2022-07-31 23:54:17 INFO:	
+
+	--------------------------------------------------
+	|Results from dataset mycoplasmatales_odb10       |
+	--------------------------------------------------
+	|C:98.3%[S:98.3%,D:0.0%],F:0.6%,M:1.1%,n:174      |
+	|171	Complete BUSCOs (C)                       |
+	|171	Complete and single-copy BUSCOs (S)       |
+	|0	Complete and duplicated BUSCOs (D)        |
+	|1	Fragmented BUSCOs (F)                     |
+	|2	Missing BUSCOs (M)                        |
+	|174	Total BUSCO groups searched               |
+	--------------------------------------------------
+2022-07-31 23:54:17 INFO:	BUSCO analysis done. Total running time: 12 seconds
+2022-07-31 23:54:17 INFO:	Results written in /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_ATCC27343
+2022-07-31 23:54:17 INFO:	For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+
+2022-07-31 23:54:17 INFO:	Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO
+2022-07-31 23:54:18 INFO:	***** Start a BUSCO v5.4.1 analysis, current time: 07/31/2022 23:54:18 *****
+2022-07-31 23:54:18 INFO:	Configuring BUSCO with local environment
+2022-07-31 23:54:18 INFO:	Mode is genome
+2022-07-31 23:54:18 INFO:	Downloading information on latest versions of BUSCO data...
+2022-07-31 23:54:31 INFO:	Input file is /disk3/default/V2/admin/core/data/myco/Mcc_GM508D.fa
+2022-07-31 23:54:31 INFO:	Running BUSCO using lineage dataset mycoplasmatales_odb10 (prokaryota, 2020-03-06)
+2022-07-31 23:54:31 INFO:	Running 1 job(s) on bbtools, starting at 07/31/2022 23:54:31
+2022-07-31 23:54:32 INFO:	[bbtools]	1 of 1 task(s) completed
+2022-07-31 23:54:32 INFO:	***** Run Prodigal on input to predict and extract genes *****
+2022-07-31 23:54:32 INFO:	Running Prodigal with genetic code 4 in single mode
+2022-07-31 23:54:32 INFO:	Running 1 job(s) on prodigal, starting at 07/31/2022 23:54:32
+2022-07-31 23:54:33 INFO:	[prodigal]	1 of 1 task(s) completed
+2022-07-31 23:54:33 INFO:	Genetic code 4 selected as optimal
+2022-07-31 23:54:33 INFO:	***** Run HMMER on gene sequences *****
+2022-07-31 23:54:33 INFO:	Running 174 job(s) on hmmsearch, starting at 07/31/2022 23:54:33
+2022-07-31 23:54:35 INFO:	[hmmsearch]	18 of 174 task(s) completed
+2022-07-31 23:54:36 INFO:	[hmmsearch]	35 of 174 task(s) completed
+2022-07-31 23:54:37 INFO:	[hmmsearch]	53 of 174 task(s) completed
+2022-07-31 23:54:38 INFO:	[hmmsearch]	70 of 174 task(s) completed
+2022-07-31 23:54:38 INFO:	[hmmsearch]	87 of 174 task(s) completed
+2022-07-31 23:54:39 INFO:	[hmmsearch]	105 of 174 task(s) completed
+2022-07-31 23:54:40 INFO:	[hmmsearch]	122 of 174 task(s) completed
+2022-07-31 23:54:40 INFO:	[hmmsearch]	140 of 174 task(s) completed
+2022-07-31 23:54:41 INFO:	[hmmsearch]	157 of 174 task(s) completed
+2022-07-31 23:54:43 INFO:	[hmmsearch]	174 of 174 task(s) completed
+2022-07-31 23:54:43 INFO:	Results:	C:99.4%[S:99.4%,D:0.0%],F:0.0%,M:0.6%,n:174	   
+
+2022-07-31 23:54:43 INFO:	
+
+	--------------------------------------------------
+	|Results from dataset mycoplasmatales_odb10       |
+	--------------------------------------------------
+	|C:99.4%[S:99.4%,D:0.0%],F:0.0%,M:0.6%,n:174      |
+	|173	Complete BUSCOs (C)                       |
+	|173	Complete and single-copy BUSCOs (S)       |
+	|0	Complete and duplicated BUSCOs (D)        |
+	|0	Fragmented BUSCOs (F)                     |
+	|1	Missing BUSCOs (M)                        |
+	|174	Total BUSCO groups searched               |
+	--------------------------------------------------
+2022-07-31 23:54:43 INFO:	BUSCO analysis done. Total running time: 12 seconds
+2022-07-31 23:54:43 INFO:	Results written in /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_GM508D
+2022-07-31 23:54:43 INFO:	For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+
+2022-07-31 23:54:43 INFO:	Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO
+2022-07-31 23:54:44 INFO:	***** Start a BUSCO v5.4.1 analysis, current time: 07/31/2022 23:54:44 *****
+2022-07-31 23:54:44 INFO:	Configuring BUSCO with local environment
+2022-07-31 23:54:44 INFO:	Mode is genome
+2022-07-31 23:54:44 INFO:	Downloading information on latest versions of BUSCO data...
+2022-07-31 23:54:56 INFO:	Input file is /disk3/default/V2/admin/core/data/myco/Mcc_PPCC_MCI.fa
+2022-07-31 23:54:57 INFO:	Running BUSCO using lineage dataset mycoplasmatales_odb10 (prokaryota, 2020-03-06)
+2022-07-31 23:54:57 INFO:	Running 1 job(s) on bbtools, starting at 07/31/2022 23:54:57
+2022-07-31 23:54:57 INFO:	[bbtools]	1 of 1 task(s) completed
+2022-07-31 23:54:57 INFO:	***** Run Prodigal on input to predict and extract genes *****
+2022-07-31 23:54:57 INFO:	Running Prodigal with genetic code 4 in single mode
+2022-07-31 23:54:57 INFO:	Running 1 job(s) on prodigal, starting at 07/31/2022 23:54:57
+2022-07-31 23:54:59 INFO:	[prodigal]	1 of 1 task(s) completed
+2022-07-31 23:54:59 INFO:	Genetic code 4 selected as optimal
+2022-07-31 23:54:59 INFO:	***** Run HMMER on gene sequences *****
+2022-07-31 23:54:59 INFO:	Running 174 job(s) on hmmsearch, starting at 07/31/2022 23:54:59
+2022-07-31 23:55:00 INFO:	[hmmsearch]	18 of 174 task(s) completed
+2022-07-31 23:55:02 INFO:	[hmmsearch]	35 of 174 task(s) completed
+2022-07-31 23:55:03 INFO:	[hmmsearch]	53 of 174 task(s) completed
+2022-07-31 23:55:03 INFO:	[hmmsearch]	70 of 174 task(s) completed
+2022-07-31 23:55:04 INFO:	[hmmsearch]	87 of 174 task(s) completed
+2022-07-31 23:55:05 INFO:	[hmmsearch]	105 of 174 task(s) completed
+2022-07-31 23:55:05 INFO:	[hmmsearch]	122 of 174 task(s) completed
+2022-07-31 23:55:06 INFO:	[hmmsearch]	140 of 174 task(s) completed
+2022-07-31 23:55:07 INFO:	[hmmsearch]	157 of 174 task(s) completed
+2022-07-31 23:55:08 INFO:	[hmmsearch]	174 of 174 task(s) completed
+2022-07-31 23:55:08 INFO:	Results:	C:98.9%[S:98.9%,D:0.0%],F:0.0%,M:1.1%,n:174	   
+
+2022-07-31 23:55:09 INFO:	
+
+	--------------------------------------------------
+	|Results from dataset mycoplasmatales_odb10       |
+	--------------------------------------------------
+	|C:98.9%[S:98.9%,D:0.0%],F:0.0%,M:1.1%,n:174      |
+	|172	Complete BUSCOs (C)                       |
+	|172	Complete and single-copy BUSCOs (S)       |
+	|0	Complete and duplicated BUSCOs (D)        |
+	|0	Fragmented BUSCOs (F)                     |
+	|2	Missing BUSCOs (M)                        |
+	|174	Total BUSCO groups searched               |
+	--------------------------------------------------
+2022-07-31 23:55:09 INFO:	BUSCO analysis done. Total running time: 12 seconds
+2022-07-31 23:55:09 INFO:	Results written in /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_PPCC_MCI
+2022-07-31 23:55:09 INFO:	For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+
+2022-07-31 23:55:09 INFO:	Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO
+2022-07-31 23:55:09 INFO:	***** Start a BUSCO v5.4.1 analysis, current time: 07/31/2022 23:55:09 *****
+2022-07-31 23:55:09 INFO:	Configuring BUSCO with local environment
+2022-07-31 23:55:09 INFO:	Mode is genome
+2022-07-31 23:55:09 INFO:	Downloading information on latest versions of BUSCO data...
+2022-07-31 23:55:22 INFO:	Input file is /disk3/default/V2/admin/core/data/myco/M.leachii_990146.fa
+2022-07-31 23:55:22 INFO:	Running BUSCO using lineage dataset mycoplasmatales_odb10 (prokaryota, 2020-03-06)
+2022-07-31 23:55:22 INFO:	Running 1 job(s) on bbtools, starting at 07/31/2022 23:55:22
+2022-07-31 23:55:23 INFO:	[bbtools]	1 of 1 task(s) completed
+2022-07-31 23:55:23 INFO:	***** Run Prodigal on input to predict and extract genes *****
+2022-07-31 23:55:23 INFO:	Running Prodigal with genetic code 4 in single mode
+2022-07-31 23:55:23 INFO:	Running 1 job(s) on prodigal, starting at 07/31/2022 23:55:23
+2022-07-31 23:55:24 INFO:	[prodigal]	1 of 1 task(s) completed
+2022-07-31 23:55:24 INFO:	Genetic code 4 selected as optimal
+2022-07-31 23:55:24 INFO:	***** Run HMMER on gene sequences *****
+2022-07-31 23:55:24 INFO:	Running 174 job(s) on hmmsearch, starting at 07/31/2022 23:55:24
+2022-07-31 23:55:26 INFO:	[hmmsearch]	18 of 174 task(s) completed
+2022-07-31 23:55:28 INFO:	[hmmsearch]	35 of 174 task(s) completed
+2022-07-31 23:55:29 INFO:	[hmmsearch]	53 of 174 task(s) completed
+2022-07-31 23:55:29 INFO:	[hmmsearch]	70 of 174 task(s) completed
+2022-07-31 23:55:30 INFO:	[hmmsearch]	87 of 174 task(s) completed
+2022-07-31 23:55:31 INFO:	[hmmsearch]	105 of 174 task(s) completed
+2022-07-31 23:55:31 INFO:	[hmmsearch]	122 of 174 task(s) completed
+2022-07-31 23:55:32 INFO:	[hmmsearch]	140 of 174 task(s) completed
+2022-07-31 23:55:33 INFO:	[hmmsearch]	157 of 174 task(s) completed
+2022-07-31 23:55:34 INFO:	[hmmsearch]	174 of 174 task(s) completed
+2022-07-31 23:55:34 INFO:	Results:	C:98.9%[S:98.9%,D:0.0%],F:0.6%,M:0.5%,n:174	   
+
+2022-07-31 23:55:34 INFO:	
+
+	--------------------------------------------------
+	|Results from dataset mycoplasmatales_odb10       |
+	--------------------------------------------------
+	|C:98.9%[S:98.9%,D:0.0%],F:0.6%,M:0.5%,n:174      |
+	|172	Complete BUSCOs (C)                       |
+	|172	Complete and single-copy BUSCOs (S)       |
+	|0	Complete and duplicated BUSCOs (D)        |
+	|1	Fragmented BUSCOs (F)                     |
+	|1	Missing BUSCOs (M)                        |
+	|174	Total BUSCO groups searched               |
+	--------------------------------------------------
+2022-07-31 23:55:34 INFO:	BUSCO analysis done. Total running time: 13 seconds
+2022-07-31 23:55:34 INFO:	Results written in /disk3/default/V2/admin/core/data/myco/outBusco/M.leachii_990146
+2022-07-31 23:55:34 INFO:	For assistance with interpreting the results, please consult the userguide: https://busco.ezlab.org/busco_userguide.html
+
+2022-07-31 23:55:34 INFO:	Visit this page https://gitlab.com/ezlab/busco#how-to-cite-busco to see how to cite BUSCO

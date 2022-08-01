@@ -1,0 +1,75 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/955at2085.hmm
+# target sequence database:        /disk3/default/V2/admin/core/data/myco_out/outBusco/M.leachii_990146/prodigal_output/predicted_genes/predicted.faa
+# per-dom hits tabular output:     /disk3/default/V2/admin/core/data/myco_out/outBusco/M.leachii_990146/run_mycoplasmatales_odb10/hmmer_output/955at2085.out
+# number of worker threads:        1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       955at2085  [M=350]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+   1.1e-143  474.1  15.6   7.3e-108  356.3  12.2    3.1  2  FR668087.1_310  # 375768 # 377138 # -1 # ID=1_310;partial=00;
+
+
+Domain annotation for each sequence (and alignments):
+>> FR668087.1_310  # 375768 # 377138 # -1 # ID=1_310;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.5   0.1   1.1e-36   9.7e-34       1      87 [.       8     105 ..       8     120 .. 0.90
+   2 !  356.3  12.2  8.1e-111  7.3e-108      87     350 .]     135     447 ..     115     447 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 112.5 bits;  conditional E-value: 1.1e-36
+       955at2085   1 ivnhlkekgfvfqgseiygglantwdyGplgvllkenikk...kefikke.....ldskillnkkvWkasGhldnfsdllien...kkryradkl 84 
+                     +++hlk++gfvfqgseiygglan+wdyGplg+ +k+++kk   ++fikk+     lds+i+ln+kvWkasGh+d f+d+li++   k+r+radkl
+  FR668087.1_310   8 MISHLKNQGFVFQGSEIYGGLANSWDYGPLGCEVKNKLKKvwwDFFIKKNplnigLDSSIILNSKVWKASGHVDGFNDPLIDCkncKSRWRADKL 102
+                     689***********************************9866689**997666669*************************9722257******* PP
+
+       955at2085  85 iee 87 
+                     iee
+  FR668087.1_310 103 IEE 105
+                     997 PP
+
+  == domain 2  score: 356.3 bits;  conditional E-value: 8.1e-111
+       955at2085  87 ektewseirkfnllfktkqGvvedekskvylrPetaqgifvnfknvlrstraklPlgiaqiGksfrnevtpgnfifrtrefeqlelevfkp.... 177
+                     +k+++++irkf l+fkt+qGv+ed++s vylrPetaqgif+nfknv+rs+r+klP+gi+qiGksfrne+tpgnfifrtrefeq+ele+f +    
+  FR668087.1_310 135 QKKDFTQIRKFALMFKTNQGVLEDDSSIVYLRPETAQGIFINFKNVQRSMRKKLPFGIGQIGKSFRNEITPGNFIFRTREFEQMELEFFFDpnds 229
+                     689************************************************************************************97532222 PP
+
+       955at2085 178 ...............eealglkkenirlrehekeelahys.ktsdleykfpfGwgellGianrgdfdlk.....skekleyldeetnekiipavi 251
+                                    +++++l+k+n+++re+ k+elahy+ ktsd+e++fpfGwgel+Gi++r+dfdlk     ske+l++l+ee+n+ki+++vi
+  FR668087.1_310 230 ndwfkywleqieiflTQKISLDKNNYKIRENLKDELAHYAlKTSDIEFNFPFGWGELWGISHRSDFDLKvhqdlSKEDLTVLKEENNQKILANVI 324
+                     2222222222222222468899*****************9689*************************855566788999*************** PP
+
+       955at2085 252 epsvGldrlllavlveaye.........rivlkl...laPykvavlPlvkkl...akelfekll......ydesgsiGkryrrqdaiGtlycitv 325
+                     epsvG++rl+la++++ay+         rivlkl   laPy+va+ Pl+k+l   a++lf +ll      yde+g+iGkryrrqdaiGt+++it+
+  FR668087.1_310 325 EPSVGVERLMLAIFWQAYTeeqleennsRIVLKLpynLAPYQVAITPLSKQLnqnANQLFLELLkdfdavYDETGNIGKRYRRQDAIGTPFVITY 419
+                     **************99985334444444899*999999**********99763337899998844444449************************ PP
+
+       955at2085 326 dfdsle...vtirerdtmeqkrikieel 350
+                     df++le   vtir rdtm+q+ri i++l
+  FR668087.1_310 420 DFQTLEdqkVTIRYRDTMKQERILISQL 447
+                     **9974444**************99986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (350 nodes)
+Target sequences:                          900  (302866 residues searched)
+Passed MSV filter:                        65  (0.0722222); expected 18.0 (0.02)
+Passed bias filter:                        8  (0.00888889); expected 18.0 (0.02)
+Passed Vit filter:                         1  (0.00111111); expected 0.9 (0.001)
+Passed Fwd filter:                         1  (0.00111111); expected 0.0 (1e-05)
+Initial search space (Z):                900  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.03u 0.00s 00:00:00.03 Elapsed: 00:00:00.04
+# Mc/sec: 2650.08
+//
+[ok]

@@ -1,0 +1,19 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+CP000123.1_491       -            989 78at2085             -            778  3.1e-259  857.9  76.3   1   4  1.6e-107  4.4e-105  348.1  29.9     1   328     2   340     2   344 0.87 # 585624 # 588590 # 1 # ID=1_491;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.252
+CP000123.1_491       -            989 78at2085             -            778  3.1e-259  857.9  76.3   2   4   0.00031     0.086    6.5  10.4   243   322   279   359   269   369 0.70 # 585624 # 588590 # 1 # ID=1_491;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.252
+CP000123.1_491       -            989 78at2085             -            778  3.1e-259  857.9  76.3   3   4   3.8e-50   1.1e-47  158.3  32.8   230   541   300   624   297   653 0.70 # 585624 # 588590 # 1 # ID=1_491;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.252
+CP000123.1_491       -            989 78at2085             -            778  3.1e-259  857.9  76.3   4   4  5.5e-111  1.5e-108  359.5   8.5   488   774   697   987   676   988 0.83 # 585624 # 588590 # 1 # ID=1_491;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.252
+CP000123.1_533       -            624 78at2085             -            778   1.2e-05   19.2   0.1   1   1   8.1e-08   2.3e-05   18.3   0.1   678   754   517   589   514   603 0.86 # 646156 # 648027 # -1 # ID=1_533;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.240
+CP000123.1_532       -            618 78at2085             -            778   6.6e-05   16.8   0.1   1   1   5.5e-07   0.00015   15.6   0.1   678   752   513   583   508   598 0.87 # 644285 # 646138 # -1 # ID=1_532;partial=00;start_type=ATG;rbs_motif=AGGAGG;rbs_spacer=5-10bp;gc_cont=0.253
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/78at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_ATCC27343/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_ATCC27343/run_mycoplasmatales_odb10/hmmer_output/78at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/78at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_ATCC27343/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:27:16 2022
+# [ok]

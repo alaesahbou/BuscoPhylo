@@ -1,0 +1,17 @@
+#                                                                                                                                                                                                                           --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                                                                                                                                                       accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                                                                                                                                               ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NG-25720_PPCC_MCI_lib436635_7080_3_1_(paired)_trimmed_(paired)_mapping_-_Extracted_nucleotide_sequences_[NG-25720_PPCC_MCI_lib436635_7080_3_1]_(single)_contig_7_17 -            351 2452at2085           -            224     8e-77  253.4  15.9   1   2   7.7e-05     0.033    9.4   4.9     7    60    41    95    36   113 0.83 # 16527 # 17579 # -1 # ID=7_17;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.224
+NG-25720_PPCC_MCI_lib436635_7080_3_1_(paired)_trimmed_(paired)_mapping_-_Extracted_nucleotide_sequences_[NG-25720_PPCC_MCI_lib436635_7080_3_1]_(single)_contig_7_17 -            351 2452at2085           -            224     8e-77  253.4  15.9   2   2     8e-77   3.4e-74  244.8   6.0    19   220   106   341    86   346 0.80 # 16527 # 17579 # -1 # ID=7_17;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.224
+NG-25720_PPCC_MCI_lib436635_7080_3_1_(paired)_trimmed_(paired)_mapping_-_Extracted_nucleotide_sequences_[NG-25720_PPCC_MCI_lib436635_7080_3_1]_(single)_contig_1_3  -            501 2452at2085           -            224   0.00066   15.0   0.1   1   2   0.00057      0.24    6.6   0.0    93   148   250   306   238   347 0.79 # 1542 # 3044 # -1 # ID=1_3;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.281
+NG-25720_PPCC_MCI_lib436635_7080_3_1_(paired)_trimmed_(paired)_mapping_-_Extracted_nucleotide_sequences_[NG-25720_PPCC_MCI_lib436635_7080_3_1]_(single)_contig_1_3  -            501 2452at2085           -            224   0.00066   15.0   0.1   2   2    0.0011      0.48    5.6   0.0   192   213   469   490   458   493 0.84 # 1542 # 3044 # -1 # ID=1_3;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.281
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/2452at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_PPCC_MCI/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_PPCC_MCI/run_mycoplasmatales_odb10/hmmer_output/2452at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/2452at2085.hmm /disk3/default/V2/admin/core/data/myco/outBusco/Mcc_PPCC_MCI/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Sun Jul 31 23:55:03 2022
+# [ok]

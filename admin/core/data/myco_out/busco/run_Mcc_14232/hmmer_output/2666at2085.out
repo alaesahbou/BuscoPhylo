@@ -1,0 +1,24 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+JFDO01000004.1_93    -            294 2666at2085           -            250   5.3e-70  231.1  12.3   1   2   2.9e-44   3.7e-42  139.9   3.1     2   134     8   147     7   154 0.89 # 112603 # 113484 # -1 # ID=4_93;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.231
+JFDO01000004.1_93    -            294 2666at2085           -            250   5.3e-70  231.1  12.3   2   2   4.3e-31   5.4e-29   96.8   1.8   126   246   157   292   149   293 0.81 # 112603 # 113484 # -1 # ID=4_93;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.231
+JFDO01000027.1_42    -            288 2666at2085           -            250   3.7e-26   87.5   7.8   1   1   1.6e-26     2e-24   81.8   7.8     5   245     4   277     2   282 0.74 # 45057 # 45920 # -1 # ID=27_42;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.240
+JFDO01000003.1_12    -            289 2666at2085           -            250   5.8e-26   86.8  19.0   1   2   9.6e-17   1.2e-14   49.8   8.2     6   179     7   177     2   185 0.83 # 12706 # 13572 # -1 # ID=3_12;partial=00;start_type=ATG;rbs_motif=AGGA/GGAG/GAGG;rbs_spacer=11-12bp;gc_cont=0.208
+JFDO01000003.1_12    -            289 2666at2085           -            250   5.8e-26   86.8  19.0   2   2   1.4e-14   1.7e-12   42.7   3.4   164   247   197   286   177   288 0.86 # 12706 # 13572 # -1 # ID=3_12;partial=00;start_type=ATG;rbs_motif=AGGA/GGAG/GAGG;rbs_spacer=11-12bp;gc_cont=0.208
+JFDO01000015.1_11    -            281 2666at2085           -            250   1.2e-23   79.3   5.1   1   2   1.4e-12   1.7e-10   36.1   0.2     2    85     4    91     3   116 0.81 # 9123 # 9965 # -1 # ID=15_11;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.256
+JFDO01000015.1_11    -            281 2666at2085           -            250   1.2e-23   79.3   5.1   2   2   2.2e-15   2.8e-13   45.3   0.9   160   240   185   274   139   280 0.77 # 9123 # 9965 # -1 # ID=15_11;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.256
+JFDO01000036.1_11    -            280 2666at2085           -            250   1.4e-22   75.7  11.5   1   2   9.8e-10   1.2e-07   26.8   0.6     4    97     6    99     3   111 0.66 # 8259 # 9098 # 1 # ID=36_11;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.249
+JFDO01000036.1_11    -            280 2666at2085           -            250   1.4e-22   75.7  11.5   2   2   8.1e-18     1e-15   53.3   4.4   151   242   179   277   150   279 0.76 # 8259 # 9098 # 1 # ID=36_11;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.249
+JFDO01000031.1_3     -            279 2666at2085           -            250   3.2e-22   74.6  13.1   1   1   2.5e-22   3.1e-20   68.0  13.1     5   241     8   274     5   278 0.71 # 1648 # 2484 # 1 # ID=31_3;partial=00;start_type=ATG;rbs_motif=3Base/5BMM;rbs_spacer=13-15bp;gc_cont=0.229
+JFDO01000011.1_20    -            266 2666at2085           -            250   1.3e-12   43.1  12.2   1   1   1.6e-13     2e-11   39.2  12.2     3   212     3   235     1   258 0.69 # 18014 # 18811 # 1 # ID=11_20;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.195
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/2666at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/run_mycoplasmatales_odb10/hmmer_output/2666at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/2666at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14232/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:26:21 2022
+# [ok]

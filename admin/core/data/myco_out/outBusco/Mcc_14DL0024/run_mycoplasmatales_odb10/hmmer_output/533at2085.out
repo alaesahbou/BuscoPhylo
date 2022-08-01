@@ -1,0 +1,21 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+LBMF01000001.1_25    -            630 533at2085            -            515  1.7e-225  745.1  12.9   1   2  6.4e-199  1.7e-196  649.5   4.4     1   416     5   468     5   498 0.88 # 29606 # 31495 # -1 # ID=1_25;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.288
+LBMF01000001.1_25    -            630 533at2085            -            515  1.7e-225  745.1  12.9   2   2   4.6e-30   1.2e-27   92.3   1.9   419   515   518   618   492   618 0.82 # 29606 # 31495 # -1 # ID=1_25;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.288
+LBMF01000004.1_89    -            439 533at2085            -            515   1.7e-18   62.1   4.5   1   2   8.2e-05     0.021    9.0   0.9     3    31     5    34     3   211 0.68 # 96931 # 98247 # -1 # ID=4_89;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.252
+LBMF01000004.1_89    -            439 533at2085            -            515   1.7e-18   62.1   4.5   2   2     5e-18   1.3e-15   52.6   0.1   256   363   274   381   262   394 0.82 # 96931 # 98247 # -1 # ID=4_89;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.252
+LBMF01000006.1_20    -            424 533at2085            -            515   4.4e-17   57.5   6.2   1   4     0.011       2.9    2.0   0.0     4    28     5    30     2    42 0.72 # 21061 # 22332 # -1 # ID=6_20;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.197
+LBMF01000006.1_20    -            424 533at2085            -            515   4.4e-17   57.5   6.2   2   4     0.084        22   -0.9   0.0   186   247    99   158    81   183 0.73 # 21061 # 22332 # -1 # ID=6_20;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.197
+LBMF01000006.1_20    -            424 533at2085            -            515   4.4e-17   57.5   6.2   3   4      0.14        38   -1.7   0.1   462   493   212   244   143   262 0.63 # 21061 # 22332 # -1 # ID=6_20;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.197
+LBMF01000006.1_20    -            424 533at2085            -            515   4.4e-17   57.5   6.2   4   4     3e-19   7.7e-17   56.7   0.6   257   371   265   379   257   389 0.88 # 21061 # 22332 # -1 # ID=6_20;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.197
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/533at2085.hmm
+# Target file:     /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14DL0024/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14DL0024/run_mycoplasmatales_odb10/hmmer_output/533at2085.out --cpu 1 /root/busco_downloads/lineages/mycoplasmatales_odb10/hmms/533at2085.hmm /disk3/default/V2/admin/core/data/myco_out/outBusco/Mcc_14DL0024/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /root
+# Date:            Mon Aug  1 00:26:49 2022
+# [ok]
