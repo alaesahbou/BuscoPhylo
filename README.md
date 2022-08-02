@@ -11,9 +11,9 @@ Then configure your database setting by editing the file <code>config.app.php</c
 
 ## Login as a root in Terminal And give Daemon access to the application directory
 ````bash
-# Login as Root :</h4> 
+# Login as Root
 sudo -s
-#Give daemon access folder :</h4> 
+#Give daemon access folder
 chown daemon path/to/app_dir
 
 ````
