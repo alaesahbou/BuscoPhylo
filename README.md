@@ -1,5 +1,6 @@
 # BuscoPhylo
  In the era of Big data in genomics, thousands of genome sequences of living organisms are released in the public databases such as GenBank.  BuscoPhylo has been implemented to provide a fully automated and complete pipeline to quickly perform BUSCO-based phylogenomic analysis starting from assembled genome sequences as inputs. The BuscoPhylo is a free, on-line and user-friendly webserver accepting genome sequences in fasta format as inputs and enabling to the user to export the tree ready for publication and all the results of the steps included in the pipeline for downstream analyses.
+ <br>
 <img src="https://user-images.githubusercontent.com/22656460/182361469-27351a30-7a7d-441e-9824-967b1078b161.png" align="center" width="600">
 
 <h1>Installation</h1>
