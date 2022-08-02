@@ -1,7 +1,7 @@
 # BuscoPhylo
  In the era of Big data in genomics, thousands of genome sequences of living organisms are released in the public databases such as GenBank.  BuscoPhylo has been implemented to provide a fully automated and complete pipeline to quickly perform BUSCO-based phylogenomic analysis starting from assembled genome sequences as inputs. The BuscoPhylo is a free, on-line and user-friendly webserver accepting genome sequences in fasta format as inputs and enabling to the user to export the tree ready for publication and all the results of the steps included in the pipeline for downstream analyses.
  <br>
-<img src="https://user-images.githubusercontent.com/22656460/182361469-27351a30-7a7d-441e-9824-967b1078b161.png" align="center" width="600">
+<img src="https://user-images.githubusercontent.com/60272832/182402133-68db82a0-20ed-4fe9-8e57-223f854f3df7.png" align="center" width="600">
 
 <h1>Installation</h1>
 
@@ -10,7 +10,6 @@
 Then configure your database setting by editing <code>config.app.php</code></p>
 
 <h3>Login as a root in Terminal And give Daemon access to folder :</h3>
-![logo-1](https://user-images.githubusercontent.com/60272832/182402133-68db82a0-20ed-4fe9-8e57-223f854f3df7.png)
 
   <h4>1 - Login as Root :</h4> 
   <code>su -</code>
