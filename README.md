@@ -6,7 +6,7 @@
 <h1>Installation</h1>
 
 
-<p>Download the app from GitHub https://github.com/alaesahbou/Busco_based_phylogenomics_app, and extraire the ZIP file in your server (ampps, xampp, WAMP, online server …)
+<p>Download the app from GitHub https://github.com/alaesahbou/BuscoPhylo, and extraire the ZIP file in your server (ampps, xampp, WAMP, online server …)
 Then configure your database setting by editing <code>config.app.php</code></p>
 
 <h3>Login as a root in Terminal And give Daemon access to folder :</h3>
