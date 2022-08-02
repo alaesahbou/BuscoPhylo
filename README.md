@@ -10,6 +10,7 @@
 Then configure your database setting by editing <code>config.app.php</code></p>
 
 <h3>Login as a root in Terminal And give Daemon access to folder :</h3>
+![logo-1](https://user-images.githubusercontent.com/60272832/182402133-68db82a0-20ed-4fe9-8e57-223f854f3df7.png)
 
   <h4>1 - Login as Root :</h4> 
   <code>su -</code>
