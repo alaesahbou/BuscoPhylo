@@ -5,17 +5,16 @@ Thanks to the advances in DNA sequencing technolgies, thousands of genome sequen
 
 # Installation
 ## Source
-
-<p>Download the application from GitHub https://github.com/alaesahbou/Busco_based_phylogenomics_app, and extract the zipped file in your server (ampps, xampp, WAMP, online server …)
-Then configure your database setting by editing the file <code>config.app.php</code></p>
+Download the application from GitHub https://github.com/alaesahbou/Busco_based_phylogenomics_app, and extract the zipped file in your server (ampps, xampp, WAMP, online server …)
+Then configure your database setting by editing the file <code>config.app.php</code>
 ````bash
-git clone sfdsfdsqdfsqdfq
+# Download the BuscoPhylo source code 
+git clone https://github.com/alaesahbou/BuscoPhylo.git
 
-# Move the the dir to your your server (here xam
-mv   //
+# Move the the BuscoPhylo dir to your your server (here xam
 # Login as Root
 sudo -s
-#Give daemon access folder
+# Give daemon access folder
 chown daemon path/to/app_dir
 
 ````
@@ -31,7 +30,6 @@ upload_max_filesize=8000M
 post_max_size=8000M
 ````
 
-
 # Requirements
 <ul>
   <li><code><a href="https://busco.ezlab.org/busco_userguide.html">BUSCO</a></code></li>
@@ -43,7 +41,13 @@ post_max_size=8000M
   <li><code><a href="http://etetoolkit.org/download/">ETE3</a></code></li>
 </ul>
 
-<h1>APP Manuel</h1>
+# Submitting a project
+## Input Requirements
+- At least 4 Genome sequence files in FASTA format (.fa,.fsa,.fasta,.fna are supported)
+- The names of the file wiill be used as leaf labels 
+- We recommand this format <code>Genus_species_strain.fasta</code> 
+
+
 <center><img src="http://196.200.148.216/assets/img/plan%20BBPA.png"></center>
 <h2>Creatre Project :</h2>
 <h3>I- Insertion :</h3>
