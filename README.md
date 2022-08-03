@@ -4,13 +4,15 @@ Thanks to the advances in DNA sequencing technolgies, thousands of genome sequen
 <img src="https://user-images.githubusercontent.com/22656460/182361469-27351a30-7a7d-441e-9824-967b1078b161.png" align="center" width="600">
 
 # Installation
-
+## Source
 
 <p>Download the application from GitHub https://github.com/alaesahbou/Busco_based_phylogenomics_app, and extract the zipped file in your server (ampps, xampp, WAMP, online server …)
 Then configure your database setting by editing the file <code>config.app.php</code></p>
-
-## Login as a root in Terminal And give Daemon access to the application directory
 ````bash
+git clone sfdsfdsqdfsqdfq
+
+# Move the the dir to your your server (here xam
+mv   //
 # Login as Root
 sudo -s
 #Give daemon access folder
