@@ -11,7 +11,9 @@ Then configure your database setting by editing the file <code>config.app.php</c
 # Download the BuscoPhylo source code 
 git clone https://github.com/alaesahbou/BuscoPhylo.git
 
-# Move the the BuscoPhylo dir to your your server (here xam
+# Move the the BuscoPhylo dir to your your server (exmaple here lampp)
+mv BuscoPhylo /opt/lampp/htdocs/
+
 # Login as Root
 sudo -s
 # Give daemon access folder
