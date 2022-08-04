@@ -49,6 +49,10 @@ post_max_size=8000M
 - The names of the file wiill be used as leaf labels 
 - We recommand this format <code>Genus_species_strain.fasta</code> 
 
+## Output files
+- outBusco dir contain Busco runs
+- out dir containing the ML tree, logs, proteins and alignments
+- pdf png svg files for phylogenomic tree
 
 <center><img src="http://196.200.148.216/assets/img/plan%20BBPA.png"></center>
 <h2>Creatre Project :</h2>
