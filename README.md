@@ -88,4 +88,4 @@ graph TD
 ```
 <h2>Show Result :</h2>
 
-<h5>Result Exemple : <a href="http://196.200.148.216/assets/tree.pdf" target="_blank">tree.pdf</a></h5>
+<h5>Result Exemple : <a href="https://github.com/alaesahbou/BuscoPhylo/files/9277029/tree_8.pdf" target="_blank">tree.pdf</a></h5>
