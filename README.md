@@ -54,13 +54,13 @@ post_max_size=8000M
 - out dir containing the ML tree, logs, proteins and alignments
 - pdf png svg files for phylogenomic tree
 
-<center><img src="http://196.200.148.216/assets/img/plan%20BBPA.png"></center>
+<center><img src="https://user-images.githubusercontent.com/60272832/183297717-6a390f18-ac0a-438d-ad00-38cad7232024.png"></center>
 <h2>Creatre Project :</h2>
 <h3>I- Insertion :</h3>
 
-<center><img src="https://user-images.githubusercontent.com/60272832/183297717-6a390f18-ac0a-438d-ad00-38cad7232024.png"></center>
+<center><img src=""></center>
 <h3>II- Show data :</h3>
-<center><img src="http://196.200.148.216/assets/img/Busco%20Based%20Phylogenomics%20App.png"></center>
+<center><img src="https://user-images.githubusercontent.com/60272832/183297795-80c89a47-7fcd-4565-92c2-59769df06142.png"></center>
 <h2>Run BUSCO :</h2>
 <h4>RUN ---[PROJECT ID]---> busco.php</h4>
 
