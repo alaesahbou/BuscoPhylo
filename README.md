@@ -58,7 +58,7 @@ post_max_size=8000M
 <h2>Creatre Project :</h2>
 <h3>I- Insertion :</h3>
 
-<center><img src=""></center>
+<center><img src="https://user-images.githubusercontent.com/60272832/183297851-9c4afdb6-7e73-4a54-b31a-2e24aedbbb88.png"></center>
 <h3>II- Show data :</h3>
 <center><img src="https://user-images.githubusercontent.com/60272832/183297795-80c89a47-7fcd-4565-92c2-59769df06142.png"></center>
 <h2>Run BUSCO :</h2>
