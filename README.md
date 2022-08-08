@@ -5,7 +5,7 @@ Thanks to the advances in DNA sequencing technolgies, thousands of genome sequen
 
 # Installation
 ## Source
-Download the application from GitHub https://github.com/alaesahbou/Busco_based_phylogenomics_app, and extract the zipped file in your server (ampps, xampp, WAMP, online server …)
+Download the application from GitHub https://github.com/alaesahbou/BuscoPhylo, and extract the zipped file in your server (ampps, xampp, WAMP, online server …)
 Then configure your database setting by editing the file <code>config.app.php</code>
 ````bash
 # Download the BuscoPhylo source code 
