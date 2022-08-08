@@ -5,27 +5,23 @@ Thanks to the advances in DNA sequencing technolgies, thousands of genome sequen
 
 # Installation
 ## Source
-Download the application from GitHub https://github.com/alaesahbou/Busco_based_phylogenomics_app, and extract the zipped file in your server (ampps, xampp, WAMP, online server …)
+Download the application from GitHub https://github.com/alaesahbou/BuscoPhylo, and extract the zipped file in your server (xampp, ampps, WAMP, online server …)
 Then configure your database setting by editing the file <code>config.app.php</code>
 ````bash
 # Download the BuscoPhylo source code 
 git clone https://github.com/alaesahbou/BuscoPhylo.git
-
 # Move the the BuscoPhylo dir to your your server (exmaple here lampp)
 mv BuscoPhylo /opt/lampp/htdocs/
-
 # Login as Root
 sudo -s
 # Give daemon access folder
 chown daemon path/to/app_dir
-
 ````
 
 ## Configure php
 ````bash
 # open the file with a text manger
 vim /etc/php5/cli/php.ini
-
 # change these lines:
 max_file_uploads=5000
 upload_max_filesize=8000M
@@ -56,10 +52,10 @@ post_max_size=8000M
 
 <center><img src="https://user-images.githubusercontent.com/60272832/183297717-6a390f18-ac0a-438d-ad00-38cad7232024.png"></center>
 <h2>Creatre Project :</h2>
-<h3>I- Insertion :</h3>
+<h3>Insertion :</h3>
 
 <center><img src="https://user-images.githubusercontent.com/60272832/183297851-9c4afdb6-7e73-4a54-b31a-2e24aedbbb88.png"></center>
-<h3>II- Show data :</h3>
+<h3>Show data :</h3>
 <center><img src="https://user-images.githubusercontent.com/60272832/183297795-80c89a47-7fcd-4565-92c2-59769df06142.png"></center>
 <h2>Run BUSCO :</h2>
 <h4>RUN ---[PROJECT ID]---> busco.php</h4>
