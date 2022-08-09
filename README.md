@@ -79,4 +79,9 @@ graph TD
         class g,a,h green
         class b,c,d,e,f blue
  ```      
-
+# Citations
+If you use BuscoPhylo, please cite these tools:
+• BUSCO V5 (Simão et al., 2015).
+• Muscle and trimAl (Edgar, 2004; Capella-Gutiérrez et al., 2009).
+• ML tree was inferred using RAxML version 8.2.11 (Stamatakis, 2014) with the following defaults parameters: “-f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 100”.
+• The tree file is visualized using ETE Toolkit (Huerta-Cepas et al., 2016).
