@@ -57,6 +57,30 @@ post_max_size=8000M
 <center><img src="https://user-images.githubusercontent.com/60272832/183297851-9c4afdb6-7e73-4a54-b31a-2e24aedbbb88.png"></center>
 <h3>Show data :</h3>
 <center><img src="https://user-images.githubusercontent.com/60272832/183297795-80c89a47-7fcd-4565-92c2-59769df06142.png"></center>
+
+# BuscoPhylo workflow
+```mermaid
+graph TD
+    
+    a{{Genome sequences >= 4 <br> <i>FASTA format}} -- <i>BUSCO --> b(BUSCO outputs)
+    b --> c(Get Shared single copy BUSCO genes)
+    c --> |<i>muscle & trimAl| d(Individual alignments <br> for each BUSCO family gene)
+    d -- <i>Seqkit --> e(Concatenate alignments)
+    e --> |<i>Infering tree using <br>RAxML| f(ML tree)
+    f --> |<i>ETE3| g[Graphical Display]
+    f --> h[Download Results]
+ 
+
+
+
+        classDef green fill:#93FF33,stroke:#333,stroke-width:2px
+        classDef blue fill:#00FA9A,stroke:#333,stroke-width:4px
+       
+        class g,a,h green
+        class b,c,d,e,f blue
+ ```      
+
+
 <h2>Run BUSCO :</h2>
 <h4>RUN ---[PROJECT ID]---> busco.php</h4>
 
