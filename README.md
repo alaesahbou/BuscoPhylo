@@ -80,32 +80,3 @@ graph TD
         class b,c,d,e,f blue
  ```      
 
-
-<h2>Run BUSCO :</h2>
-<h4>RUN ---[PROJECT ID]---> busco.php</h4>
-
-```mermaid
-graph TD
-    Z(busco.php?q=ID) --> A(Check if the project file exist)
-    A --> Q(redirect to the main page)
-    A --> B(fetech all infos about the project)
-    B --> C(Run Busco)
-    C --> D(get the reults in outbusco)
-    C --> X(Show : error on running busco)
-     classDef green fill:#9f6,color:#fff,stroke:#333,stroke-width:2px
-     classDef orange fill:#f96,color:#fff,stroke:#333,stroke-width:4px
-```
-<h2>Generate Phylogenomic Tree :</h2>
-
-```mermaid
-graph TD
-    Z(Copy BUSCO result folders to busco folder) --> A(Run BUSCO_phylogenomic python script)
-    A --> C(show the error)
-    A --> D(Generate PDF from reslut) --> X(Show the result in APP)
-    
-     classDef green fill:#9f6,color:#fff,stroke:#333,stroke-width:2px
-     classDef orange fill:#f96,color:#fff,stroke:#333,stroke-width:4px
-```
-<h2>Show Result :</h2>
-
-<h5>Result Exemple : <a href="https://github.com/alaesahbou/BuscoPhylo/files/9277029/tree_8.pdf" target="_blank">tree.pdf</a></h5>
