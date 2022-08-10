@@ -1,14 +1,5 @@
 #!/usr/bin/env python
 
-#inffered from https://github.com/jamiemcg/BUSCO_phylogenomics
-
-
-#
-# Utility script to construct species phylogenies using BUSCO results.
-# Can perform ML supermatrix or generate datasets for supertree methods.
-# Works directly from BUSCO output, as long as the same BUSCO dataset
-# has been used for each genome
-#
 # Dependencies:
 #   - BioPython
 #   - MUSCLE
@@ -68,11 +59,6 @@ def main():
     else:
         os.mkdir(working_directory)
 
-    # TODO check dependencies are installed
-    
-    # try: subprocess.check_output('trimal',shell=True)
-    # except: sys.exit('ERROR: executable not found')
-    # print_message("Starting BUSCO Phylogenomics Pipeline")
 
     # Scan start directory to identify BUSCO runs (begin with 'run_')
     busco_dirs = []
@@ -103,7 +89,7 @@ def main():
         os.chdir("busco_sequences")
         os.chdir("single_copy_busco_sequences")
         
-        print(species)
+        # print(species)
 
         for busco in os.listdir("."):
             if busco.endswith(".faa"):
@@ -116,8 +102,8 @@ def main():
                     buscos[busco_name] = []
 
                 buscos[busco_name].append(new_record)
-    print(all_species)
-    print("BUSCO\t # Species Single Copy")
+    # print(all_species)
+    # print("BUSCO\t # Species Single Copy")
     for busco in buscos:
         print(busco + " " + str(len(buscos[busco])))
 
@@ -224,10 +210,10 @@ def main():
 #        os.system("iqtree -s SUPERMATRIX.aln -bb 1000 -alrt 1000 -nt AUTO -ntmax " + str(threads) + " > /dev/null")
     #os.system("FastTree -boot 1000  SUPERMATRIX.aln" + " > SUPERMATRIX.tree")
     if outg:
-        os.system("raxmlHPC -f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 1000 -s SUPERMATRIX.aln -n nwk " + " -o " + outg + " -T " + str(threads))
+        os.system("raxmlHPC -f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 100 -s SUPERMATRIX.aln -n nwk " + " -o " + outg + " -T " + str(threads))
         os.system("raxmlHPC-PTHREADS -s " + " -o " + outg  )
     else:
-        os.system("raxmlHPC -f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 1000 -s SUPERMATRIX.aln -n nwk " + " -T " + str(threads))
+        os.system("raxmlHPC -f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 100 -s SUPERMATRIX.aln -n nwk " + " -T " + str(threads))
         os.system("raxmlHPC-PTHREADS -s ")
     os.system("raxmlHPC -f b -m PROTGAMMAILG -n output_bootstrap.tre -t RAxML_bestTree* -z RAxML_bootstrap.nwk")
     print("")
