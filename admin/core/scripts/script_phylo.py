@@ -1,15 +1,11 @@
 #!/usr/bin/env python
 
-<<<<<<< HEAD:admin/core/scripts/script_phylo.py
-
-=======
 # Dependencies:
 #   - BioPython
 #   - MUSCLE
 #   - trimAL
 #   - IQ-TREE
 #   - raxmlHPC-PTHREADS
->>>>>>> e716689a93b2d94e0a73ca3590bfb7f13f6b7285:admin/core/BUSCO_phylogenomics/BUSCO_phylogenomics.py
 
 import argparse
 import multiprocessing as mp
