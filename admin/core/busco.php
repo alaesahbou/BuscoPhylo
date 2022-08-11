@@ -49,22 +49,22 @@ $output = shell_exec('cd '.$path.'/'.$data["posts"][0]['input'].'busco; for i in
 $output = shell_exec('cd '.$path.'/'.$data["posts"][0]['input']);
 
 if(isset($data["posts"][0]['outgroup']) && ($data["posts"][0]['outgroup']=="" || is_numeric($data["posts"][0]['outgroup']))){
-     $output = shell_exec('cd '.$path.'/'.$data["posts"][0]['input'].'; python3 '.$path.'/BUSCO_phylogenomics/BUSCO_phylogenomics.py -d busco -o out -t 20 > '.$path.'/'.$data["posts"][0]['input'].'phylo.log');
+     $output = shell_exec('cd '.$path.'/'.$data["posts"][0]['input'].'; python3 '.$path.'/scripts/script_phylo.py -d busco -o out -t 20 > '.$path.'/'.$data["posts"][0]['input'].'phylo.log');
      shell_exec('sudo touch '.$path.'/'.$data["posts"][0]['input'].'out/s.sh');
         $myfile = fopen($_SERVER["DOCUMENT_ROOT"]."/admin/core/".$data["posts"][0]['input']."out/s.sh", "w") or die("Unable to open file!");
         $txt = "#!/bin/bash\n";
         fwrite($myfile, $txt);
-        $txt = "exec su root --command 'export QT_QPA_PLATFORM=offscreen && export XDG_RUNTIME_DIR=/tmp/runtime-runner && python3 ".$path."/BUSCO_phylogenomics/tree.py' \n";
+        $txt = "exec su root --command 'export QT_QPA_PLATFORM=offscreen && export XDG_RUNTIME_DIR=/tmp/runtime-runner && python3 ".$path."/scripts/tree.py' \n";
         fwrite($myfile, $txt);
         fclose($myfile);
    $output = shell_exec('cd '.$path.'/'.$data["posts"][0]['input'].'out; bash '.$path.'/'.$data["posts"][0]['input'].'out/s.sh  >> '.$path.'/'.$data["posts"][0]['input'].'tree.log 2>&1');
 } else {
-   $output = shell_exec('cd '.$path.'/'.$data["posts"][0]['input'].'; python3 '.$path.'/BUSCO_phylogenomics/BUSCO_phylogenomics.py -og '.$data["posts"][0]['outgroup'].' -d busco -o out -t 20 >> '.$path.'/'.$data["posts"][0]['input'].'phylo.log');
+   $output = shell_exec('cd '.$path.'/'.$data["posts"][0]['input'].'; python3 '.$path.'/scripts/script_phylo.py -og '.$data["posts"][0]['outgroup'].' -d busco -o out -t 20 >> '.$path.'/'.$data["posts"][0]['input'].'phylo.log');
    shell_exec('sudo touch '.$path.'/'.$data["posts"][0]['input'].'out/s.sh');
         $myfile = fopen($_SERVER["DOCUMENT_ROOT"]."/admin/core/".$data["posts"][0]['input']."out/s.sh", "w") or die("Unable to open file!");
         $txt = "#!/bin/bash\n";
         fwrite($myfile, $txt);
-        $txt = "exec su root --command 'export QT_QPA_PLATFORM=offscreen && export XDG_RUNTIME_DIR=/tmp/runtime-runner && python3 ".$path."/BUSCO_phylogenomics/tree.py ".$data["posts"][0]['outgroup']." ' \n";
+        $txt = "exec su root --command 'export QT_QPA_PLATFORM=offscreen && export XDG_RUNTIME_DIR=/tmp/runtime-runner && python3 ".$path."/scripts/tree.py ".$data["posts"][0]['outgroup']." ' \n";
         fwrite($myfile, $txt);
         fclose($myfile);
    $output = shell_exec('cd '.$path.'/'.$data["posts"][0]['input'].'out; bash '.$path.'/'.$data["posts"][0]['input'].'out/s.sh  >> '.$path.'/'.$data["posts"][0]['input'].'tree.log 2>&1');
