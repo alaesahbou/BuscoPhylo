@@ -3,6 +3,28 @@ Thanks to the advances in DNA sequencing technolgies, thousands of genome sequen
  <br>
 <img src="https://user-images.githubusercontent.com/22656460/182361469-27351a30-7a7d-441e-9824-967b1078b161.png" align="center" width="600">
 
+# BuscoPhylo workflow
+```mermaid
+graph TD
+    
+    a{{Genome sequences >= 4 <br> <i>FASTA format}} -- <i>BUSCO --> b(BUSCO outputs)
+    b --> c(Get Shared single copy BUSCO genes)
+    c --> |<i>muscle & trimAl| d(Individual alignments <br> for each BUSCO family gene)
+    d -- <i>Seqkit --> e(Concatenate alignments)
+    e --> |<i>Infering tree using <br>RAxML| f(ML tree)
+    f --> |<i>ETE3| g[Graphical Display]
+    f --> h[Download Results]
+ 
+
+
+
+        classDef green fill:#93FF33,stroke:#333,stroke-width:2px
+        classDef blue fill:#00FA9A,stroke:#333,stroke-width:4px
+       
+        class g,a,h green
+        class b,c,d,e,f blue
+ ```      
+ 
 # Installation
 ## Source
 Download the application from GitHub https://github.com/alaesahbou/BuscoPhylo, and extract the zipped file in your server (xampp, ampps, WAMP, online server …)
@@ -43,42 +65,18 @@ post_max_size=8000M
 ## Input Requirements
 - At least 4 Genome sequence files in FASTA format (.fa,.fsa,.fasta,.fna are supported)
 - The names of the file wiill be used as leaf labels 
-- We recommand this format <code>Genus_species_strain.fasta</code> 
+- We recommand this format <code>Genus_species_strain.fasta</code>
+
+## Genes input portal
+<center><img src="https://user-images.githubusercontent.com/60272832/183297851-9c4afdb6-7e73-4a54-b31a-2e24aedbbb88.png"></center>
 
 ## Output files
 - outBusco dir contain Busco runs
 - out dir containing the ML tree, logs, proteins and alignments
 - pdf png svg files for phylogenomic tree
 
-<center><img src="https://user-images.githubusercontent.com/60272832/183297717-6a390f18-ac0a-438d-ad00-38cad7232024.png"></center>
-<h2>Creatre Project :</h2>
-<h3>Insertion :</h3>
-
-<center><img src="https://user-images.githubusercontent.com/60272832/183297851-9c4afdb6-7e73-4a54-b31a-2e24aedbbb88.png"></center>
-<h3>Show data :</h3>
-<center><img src="https://user-images.githubusercontent.com/60272832/183297795-80c89a47-7fcd-4565-92c2-59769df06142.png"></center>
-
-# BuscoPhylo workflow
-```mermaid
-graph TD
-    
-    a{{Genome sequences >= 4 <br> <i>FASTA format}} -- <i>BUSCO --> b(BUSCO outputs)
-    b --> c(Get Shared single copy BUSCO genes)
-    c --> |<i>muscle & trimAl| d(Individual alignments <br> for each BUSCO family gene)
-    d -- <i>Seqkit --> e(Concatenate alignments)
-    e --> |<i>Infering tree using <br>RAxML| f(ML tree)
-    f --> |<i>ETE3| g[Graphical Display]
-    f --> h[Download Results]
- 
 
 
-
-        classDef green fill:#93FF33,stroke:#333,stroke-width:2px
-        classDef blue fill:#00FA9A,stroke:#333,stroke-width:4px
-       
-        class g,a,h green
-        class b,c,d,e,f blue
- ```      
 # Citations
 If BuscoPhylo helped with the analysis of your data, please do not forget to cite:
 
