@@ -115,7 +115,7 @@ ini_set('display_errors', 0);
 
         <div class="col-12">
             <main class="main">
-              <form id="app_frm_c" method="POST" autocomplete="OFF" class="form" enctype="multipart/form-data">
+              <form id="app_frm_c" method="POST" action="add_db.php" autocomplete="OFF" class="form" enctype="multipart/form-data">
                 
                 <div class="form__group">
                       <input required name="Host" type="text" class="form__input txt-cap" placeholder="Host">
@@ -124,7 +124,7 @@ ini_set('display_errors', 0);
                       <input required name="Username" type="text" class="form__input txt-cap" placeholder="Username">
                 </div>
                 <div class="form__group">
-                      <input required name="Password" type="text" class="form__input txt-cap" placeholder="Password">
+                      <input  name="Password" type="text" class="form__input txt-cap" value="" placeholder="Password">
                 </div>
                     </div>
                     <div class="form__group">
@@ -209,37 +209,6 @@ ini_set('display_errors', 0);
   </div>
 </footer>
 
-<?php
-$myfile = fopen("config.php", "w") or die("Unable to open file!");
-$txt = "<?php\n
-//Database Server Name:\n
-DEFINE('DBHost','localhost');\n
-
-//Database Username:\n
-DEFINE('DBUser', 'root');\n
-
-//Database Password:\n
-DEFINE('DBPass','');\n
-
-//Database Name:\n
-DEFINE('DBName','busco_laravel');\n
-
-//Character set:\n
-DEFINE('DBCharset','utf8mb4');\n
-
-//Database Collation:\n
-DEFINE('DBCollation', 'utf8_general_ci');\n
-
-//Database Prefix:\n
-DEFINE('DBPrefix', '');\n
-?>
-";
-fwrite($myfile, $txt);
-fclose($myfile);
-
-header("location:../");
-
-?>
 
 
 	<script src="../js/jquery-3.5.1.min.js"></script>
