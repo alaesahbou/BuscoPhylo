@@ -57,7 +57,7 @@ post_max_size=8000M
   <li><code><a href="https://biopython.org/">BioPython</a></code></li>
   <li><code><a href="https://www.drive5.com/muscle/">MUSCLE (v5)</a></code></li>
   <li><code><a href="http://trimal.cgenomics.org/">trimAl</a></code></li>
-  <li><code><a href="http://https://raxml-ng.vital-it.ch/#/" >RAxML</a></code></li>
+  <li><code><a href="http://www.iqtree.org/" >IQ-TREE</a></code></li>
   <li><code><a href="http://etetoolkit.org/download/">ETE3</a></code></li>
 </ul>
 
