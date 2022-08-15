@@ -309,7 +309,7 @@ ini_set('display_errors', 0);
                     <ul style="padding-left: 30px;">
                         <li><h5 style="font-weight:normal">•	BUSCO searches  was performed on each genome using BUSCO V5 (Simão et al., 2015).</h5></li>
                         <li><h5 style="font-weight:normal">•	Alignments was performed using Muscle and trimAl (Edgar, 2004; Capella-Gutiérrez et al., 2009).</h5></li>
-                        <li><h5 style="font-weight:normal">•	ML tree was inferred using RAxML version 8.2.11 (Stamatakis, 2014) with the following defaults parameters: “-f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 100”.</h5></li>
+                        <li><h5 style="font-weight:normal">•	ML tree was inferred using IQ-TREE version 1.6.12 (Nguyen et al., 2015) with the model selection from ModelFinder (Kalyaanamoorthy et al., 2017) using the following defaults parameters: “-bb 1000 -alrt 1000 -nt AUTO -ntmax”.</h5></li>
                         <li><h5 style="font-weight:normal">•	The  tree file is visualized using ETE Toolkit (Huerta-Cepas et al., 2016).</h5></li>
                         <li><h6 style="font-weight:normal">(These texts may be used for your publication.)</h6></li>
                 </ul>
