@@ -207,15 +207,15 @@ def main():
     #             "1000 ultrafast bootstrap approximations and 1000 SH-aLRTs: SUPERMATRIX.aln.treefile")
     print("")
 
-#        os.system("iqtree -s SUPERMATRIX.aln -bb 1000 -alrt 1000 -nt AUTO -ntmax " + str(threads) + " > /dev/null")
-    #os.system("FastTree -boot 1000  SUPERMATRIX.aln" + " > SUPERMATRIX.tree")
-    if outg:
-        os.system("raxmlHPC -f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 100 -s SUPERMATRIX.aln -n nwk " + " -o " + outg + " -T " + str(threads))
-        os.system("raxmlHPC-PTHREADS -s " + " -o " + outg  )
-    else:
-        os.system("raxmlHPC -f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 100 -s SUPERMATRIX.aln -n nwk " + " -T " + str(threads))
-        os.system("raxmlHPC-PTHREADS -s ")
-    os.system("raxmlHPC -f b -m PROTGAMMAILG -n output_bootstrap.tre -t RAxML_bestTree* -z RAxML_bootstrap.nwk")
+    os.system("iqtree -s SUPERMATRIX.aln -bb 1000 -alrt 1000 -nt AUTO -ntmax " + str(threads) + " > /dev/null")
+    # os.system("FastTree -boot 1000  SUPERMATRIX.aln" + " > SUPERMATRIX.tree")
+    # if outg:
+    #     os.system("raxmlHPC -f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 100 -s SUPERMATRIX.aln -n nwk " + " -o " + outg + " -T " + str(threads))
+    #     os.system("raxmlHPC-PTHREADS -s " + " -o " + outg  )
+    # else:
+    #     os.system("raxmlHPC -f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 100 -s SUPERMATRIX.aln -n nwk " + " -T " + str(threads))
+    #     os.system("raxmlHPC-PTHREADS -s ")
+    # os.system("raxmlHPC -f b -m PROTGAMMAILG -n output_bootstrap.tre -t RAxML_bestTree* -z RAxML_bootstrap.nwk")
     print("")
     # print_message("SUPERMATRIX phylogeny construction complete! See treefile: SUPERMATRIX.aln.treefile")
 

@@ -11,7 +11,7 @@ graph TD
     b --> c(Get Shared single copy BUSCO genes)
     c --> |<i>muscle & trimAl| d(Individual alignments <br> for each BUSCO family gene)
     d -- <i>Seqkit --> e(Concatenate alignments)
-    e --> |<i>Infering tree using <br>RAxML| f(ML tree)
+    e --> |<i>Infering tree using <br>IQ-TREE| f(ML tree)
     f --> |<i>ETE3| g[Graphical Display]
     f --> h[Download Results]
  
@@ -26,21 +26,21 @@ graph TD
  ```      
  
 # Installation
-## Source
-Download the application from GitHub https://github.com/alaesahbou/BuscoPhylo, and extract the zipped file in your server (xampp, ampps, WAMP, online server …)
+
+1. Download the application and extract the zipped file in your server (xampp, ampps, WAMP, online server …)
 Then configure your database setting by editing the file <code>config.app.php</code>
 ````bash
 # Download the BuscoPhylo source code 
 git clone https://github.com/alaesahbou/BuscoPhylo.git
 # Move the the BuscoPhylo dir to your your server (exmaple here lampp)
-mv BuscoPhylo /opt/lampp/htdocs/
+mv BuscoPhylo /usr/local/ampps/www/
 # Login as Root
 sudo -s
 # Give daemon access folder
 chown daemon path/to/app_dir
-````
 
-## Configure php
+````
+2. Configure php
 ````bash
 # open the file with a text manger
 vim /etc/php5/cli/php.ini
@@ -49,7 +49,7 @@ max_file_uploads=5000
 upload_max_filesize=8000M
 post_max_size=8000M
 ````
-
+3. Open BuscoPhylo via localhost on you browser (http://localhost/BuscoPhylo/)
 # Requirements
 <ul>
   <li><code><a href="https://busco.ezlab.org/busco_userguide.html">BUSCO</a></code></li>
@@ -57,7 +57,7 @@ post_max_size=8000M
   <li><code><a href="https://biopython.org/">BioPython</a></code></li>
   <li><code><a href="https://www.drive5.com/muscle/">MUSCLE (v5)</a></code></li>
   <li><code><a href="http://trimal.cgenomics.org/">trimAl</a></code></li>
-  <li><code><a href="http://https://raxml-ng.vital-it.ch/#/" >RAxML</a></code></li>
+  <li><code><a href="http://www.iqtree.org/" >IQ-TREE</a></code></li>
   <li><code><a href="http://etetoolkit.org/download/">ETE3</a></code></li>
 </ul>
 
@@ -76,12 +76,14 @@ post_max_size=8000M
 - pdf png svg files for phylogenomic tree
 
 
+# License
+BuscoPhylo is licensed under the MIT License.
 
 # Citations
 If BuscoPhylo helped with the analysis of your data, please do not forget to cite:
 
 - BUSCO V5 (Simão et al., 2015).
 - Muscle and trimAl (Edgar, 2004; Capella-Gutiérrez et al., 2009).
-- ML tree was inferred using RAxML version 8.2.11 (Stamatakis, 2014)
+- ML tree was inferred using IQ-TREE version 1.6.12 (Nguyen et al., 2015) with the model selection from ModelFinder (Kalyaanamoorthy et al., 2017) using the following defaults parameters: “-bb 1000 -alrt 1000 -nt AUTO -ntmax”.
 - The tree file is visualized using ETE Toolkit (Huerta-Cepas et al., 2016).
 - Phylogenomics analyses were conducted in BuscoPhylo (Sahbou et al., 2022).
