@@ -11,7 +11,7 @@ graph TD
     b --> c(Get Shared single copy BUSCO genes)
     c --> |<i>muscle & trimAl| d(Individual alignments <br> for each BUSCO family gene)
     d -- <i>Seqkit --> e(Concatenate alignments)
-    e --> |<i>Infering tree using <br>IQtree| f(ML tree)
+    e --> |<i>Infering tree using <br>IQ-TREE| f(ML tree)
     f --> |<i>ETE3| g[Graphical Display]
     f --> h[Download Results]
  
