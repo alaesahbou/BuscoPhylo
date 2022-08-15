@@ -27,7 +27,7 @@ graph TD
  
 # Installation
 
-1.Download the application and extract the zipped file in your server (xampp, ampps, WAMP, online server …)
+1. Download the application and extract the zipped file in your server (xampp, ampps, WAMP, online server …)
 Then configure your database setting by editing the file <code>config.app.php</code>
 ````bash
 # Download the BuscoPhylo source code 
@@ -40,8 +40,7 @@ sudo -s
 chown daemon path/to/app_dir
 
 ````
-2. 
-## Configure php
+2. Configure php
 ````bash
 # open the file with a text manger
 vim /etc/php5/cli/php.ini
@@ -50,7 +49,7 @@ max_file_uploads=5000
 upload_max_filesize=8000M
 post_max_size=8000M
 ````
-
+3. Open BuscoPhylo via localhost on you browser (http://localhost/BuscoPhylo/)
 # Requirements
 <ul>
   <li><code><a href="https://busco.ezlab.org/busco_userguide.html">BUSCO</a></code></li>
