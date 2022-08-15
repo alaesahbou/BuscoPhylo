@@ -10,21 +10,13 @@ if ($files){
  $filecount = count($files);
 }
 $filecountout = 0;
-$filesout = glob(dirname(dirname(__DIR__))."/admin/core/".$description."out/Tree.png");
+$filesout = glob(dirname(dirname(__DIR__))."/admin/core/".$description."out/tree.svg");
 if ($filesout){
  $filecountout = count($filesout);
 } if($filecountout>0){$r=1;} 
 
-if($r==1 && !file_exists(dirname(dirname(__DIR__))."/admin/core/".$description.'tree.pdf')){
-
-require(dirname(dirname(__DIR__))."/admin/core/fpdf184/fpdf.php");
-
-$pdf=new FPDF();
-$pdf->AddPage();
-$pdf->SetFont('Arial','B',16);
-$pdf->Cell(40,10,'Busco based phylogenomics app');
-$pdf-> Image(dirname(dirname(__DIR__))."/admin/core/".$description."out/Tree.png",30,50,150,100);
-$pdf->Output('F', dirname(dirname(__DIR__))."/admin/core/".$description.'tree.pdf', true);
+if($r==1){
+// shell_exec('sudo rsvg-convert -f pdf -o '.dirname(dirname(__DIR__))."/admin/core/".$description.'tree.pdf '.dirname(dirname(__DIR__))."/admin/core/".$description.'tree.svg');
 }
 
 if (!file_exists(dirname(dirname(__DIR__))."/results.json")) {
@@ -87,6 +79,65 @@ fclose($fp);
 }catch(PDOException $e)
 {
   echo "Connection failed: " . $e->getMessage();
+}
+} else if($output=="Progress"){
+if (!file_exists(dirname(dirname(__DIR__))."/results_2.json")) {
+    $fp = fopen(dirname(dirname(__DIR__)).'/results_2.json', 'w');
+    fwrite($fp, json_encode($response));
+    fclose($fp);
+}
+$json = file_get_contents(dirname(dirname(__DIR__)).'/results_2.json');
+ $data = json_decode($json,true);
+  if (!empty($data["posts"][0]["output"])) {
+    $output = $data["posts"][0]["output"];
+  } else { $output = 'Done'; }
+  if ($output=='Done') {
+  try {
+$conn = new PDO('mysql:host='.DBHost.';dbname='.DBName.';charset='.DBCharset.';collation='.DBCollation.';prefix='.DBPrefix.'', DBUser, DBPass);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$stmt = $conn->prepare("SELECT * FROM tbl_items WHERE run_time='Waiting list' ORDER BY c_id LIMIT 1");
+$stmt->execute();
+$result = $stmt->fetchAll();
+if (count($result) < 1) {
+  
+} else {
+$response = array();
+$posts = array();
+foreach($result as $row)
+{
+$st1 = preg_replace("/[^a-zA-Z]/", " ", $row[1]);
+$st2 =  preg_replace('/\s+/', ' ', $st1);
+$item_title = strtolower(str_replace(' ', '-', $st2));
+
+$title = $row[1];
+$description = $row[3];
+$age = $row[7];
+$type = "f*";
+$genres = $row[9];
+$email = $row[17];
+$outgroup = $row[15];
+
+if ($rates < 10) {
+  $rates = ''.$rates.'.0';
+}
+$posts[] = array('ID'=> $row[2], 'name'=> $title, 'lineage'=> $age, 'outgroup'=> $outgroup, 'mode'=> $genres, 'input'=> $description, 'output'=> 'Running', 'type'=> $type, 'email'=> $email);
+
+$stmt = $conn->prepare("UPDATE tbl_items SET run_time='Running' WHERE item_id = ?");
+$stmt->execute([$row[2]]);
+
+}
+$response['posts'] = $posts;
+
+$fp = fopen(dirname(dirname(__DIR__)).'/results_2.json', 'w');
+fwrite($fp, json_encode($response));
+fclose($fp);
+
+}
+}catch(PDOException $e)
+{
+  echo "Connection failed: " . $e->getMessage();
+}
 }
 }
 
@@ -207,7 +258,20 @@ ini_set('display_errors', 0);
   .tab-content {
                 margin-top: 11%;  
               }
+              #logoh{
+                  display: none;
+              }
 }
+@media only screen and (max-width: 900px) {
+    #datatbl2 {
+    }
+}
+@media only screen and (min-width: 900px){
+    #datatbl2 {
+        width: 95%;
+    }
+}
+
         </style>
     <div class="container" style="margin-bottom: 3%;">
 
@@ -218,76 +282,61 @@ ini_set('display_errors', 0);
             <div class="col-12 col-xl-12">
 
               <div class="dashbox" style="background-color: white;">
-                <div class="dashbox__title">
-                  <h3 style="color: black;"><?php echo $title; ?></h3>
-                  <h3 style="color: black;">Job ID : <?php echo $item_id; ?></h3>
+                  <div class="dashbox__table-wrap dashbox__table-wrap--2">
+                  <div style="padding: 10px 10px;border: none;"><img src="/img/logo-1.png" id="logoh" width="10%" style="float: left; margin-left: 20%; margin-right: 10px;" > <h2 style="color: #000022;margin-top: 1%;">Phylogenomics analysis pipeline by <?php echo AppName; ?></h2></div>
+                  <?php 
+                  if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree")){
+                  ?>
+                <div class="dashbox__title" style="margin-bottom: -2%;display: none;">
+                  <h5 style="color: black;font-weight: normal;"><?php echo $title; ?></h5>
+                  <h5 style="color: black;font-weight: normal;">Job ID : <?php echo $item_id; ?></h5>
 
+                </div>
                 </div>
 
                 <div class="dashbox__table-wrap dashbox__table-wrap--2">
-                  <table id="datatbl2" class="main__table main__table--dash" style="border-bottom: 1px solid orange;">
-                    <thead>
-                      <tr>
-                        <th style="color: black;">Lineage</th>
-                        <th style="color: black;">Mode</th>
-                        <th style="color: black;">Number of single copy genes</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      
-                        <tr>
-                          <td style="color: black;"><?php echo $age; ?></td>
-                          <td style="color: black;"><?php echo $row[9]; ?></td>
-                          <td style="color: black;"><?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/admin/core/'.$description.'out/proteins/')){
-    echo exec('ls '.$_SERVER['DOCUMENT_ROOT'].'/admin/core/'.$description.'out/proteins/ | wc -l');} else { echo "No results yet"; }
-    ?></td>
-                        </tr>
-                        
-
-                    </tbody>
-                  </table>
-                  <br>
+                    <h4 style="color: #000022; padding: 10px 10px;"><i class="fa-solid fa-circle-info"></i> Project Details</h4>
+                    <ul style="padding-left: 40px;">
+                        <li><h5 style="font-weight:normal">•	<strong>Name : </strong><?php echo $title; ?></h5></li>
+                        <li><h5 style="font-weight:normal">•	<strong>Job ID : </strong><?php echo $item_id; ?></h5></li>
+                        <li><h5 style="font-weight:normal">•	<strong>Lineage : </strong><?php echo $age; ?></h5></li>
+                        <li><h5 style="font-weight:normal">•	<strong>Mode : </strong><?php echo $row[9]; ?></h5></li>
+                        <li><h5 style="font-weight:normal">•	<strong><?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/admin/core/'.$description.'out/proteins/')){
+    echo exec('ls '.$_SERVER['DOCUMENT_ROOT'].'/admin/core/'.$description.'out/proteins/ | wc -l');}?></strong> BUSCOs are single copy in all <strong><?php echo exec('ls '.$_SERVER['DOCUMENT_ROOT'].'/admin/core/'.$description.'*.f* | wc -l');?></strong> species</h5></li>
+                </ul>
+                <div style="padding: 10px 10px; border: none; color: #000022;">
+                    <h4><i class="fa-solid fa-file-invoice"></i> Method</h4>
+                    <ul style="padding-left: 30px;">
+                        <li><h5 style="font-weight:normal">•	BUSCO searches  was performed on each genome using BUSCO V5 (Simão et al., 2015).</h5></li>
+                        <li><h5 style="font-weight:normal">•	Alignments was performed using Muscle and trimAl (Edgar, 2004; Capella-Gutiérrez et al., 2009).</h5></li>
+                        <li><h5 style="font-weight:normal">•	ML tree was inferred using RAxML version 8.2.11 (Stamatakis, 2014) with the following defaults parameters: “-f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 100”.</h5></li>
+                        <li><h5 style="font-weight:normal">•	The  tree file is visualized using ETE Toolkit (Huerta-Cepas et al., 2016).</h5></li>
+                        <li><h6 style="font-weight:normal">(These texts may be used for your publication.)</h6></li>
+                </ul>
+                </div>
                   
                   <?php
-                if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/RAxML_bipartitions.output_bootstrap.tre")){
-                    $txt_file = fopen(dirname(dirname(__DIR__))."/admin/core/".$description."out/RAxML_bipartitions.output_bootstrap.tre",'r');
-$a = 1;
-while ($line = fgets($txt_file)) {
- $nwk = $line;
- $a++;
-}
-fclose($txt_file);
-?> <!-- <img src="<?php // echo "../../admin/core/".$description."out/Tree.png"; ?>" alt="PhyloTree"><br> -->
-<center><img src="../../admin/core/<?php echo $description; ?>out/tree.png" alt="Tree" width="80%"></center>
-<br>
-<a class='categories__item' href='../../admin/core/<?php echo $description; ?>out/tree.png' style='margin-left: 10px;' download><i class="fa-solid fa-image" style="margin-right: 3px"></i>Download image</a>
-<a class='categories__item' href='../../admin/core/<?php echo $description; ?>out/tree.pdf' style='margin-left: 10px;' download><i class="fa-solid fa-file-pdf" style="margin-right: 3px"></i>Download pdf</a>
-<style>
-    .categories__item{
-        color: white;
-    }
-    body {
-        background-color: #f6f6f6;
-    }
-</style>
-<?php
-                } else { ?><script> setTimeout(function(){ window.location.reload(1);}, 5000);</script><?php }
-                
-                $total_items  = count( glob(dirname(dirname(__DIR__))."/admin/core/".$description."*.".$type) );
+                  }
+                  else {
+                      
+                $total_items  = count( glob(dirname(dirname(__DIR__))."/admin/core/".$description."*.f*") );
                 $total_dirs  = count( glob(dirname(dirname(__DIR__))."/admin/core/".$description."outBusco/*"), GLOB_ONLYDIR );
                 $count_busco  = count( glob(dirname(dirname(__DIR__))."/admin/core/".$description."outBusco/*/run_*/*.txt"), GLOB_ONLYDIR );
-                if(($total_items == $total_dirs) || ((file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."busco")))){
+                if(($total_items == $total_dirs) && ((file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."busco")))){
                     $busco =true;
                     if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."busco")){
                         $singlecopy =true;
                         if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/RAxML_bootstrap.nwk")){
-                        if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/RAxML_bipartitions.output_bootstrap.tre")){
-                        echo "<a class='categories__item' href='../../admin/core/{$description}Result.zip' style='margin-left: 10px;'><i class='fa-solid fa-file-zipper' style='margin-right: 3px'></i>Download Result</a>"; $alignement =true;
-                        if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/RAxML_bipartitions.output_bootstrap.tre")){
-                            echo "<a class='categories__item' href='../../admin/core/{$description}BBPA.log' style='margin-left: 10px;' download><i class='fa-solid fa-file' style='margin-right: 3px'></i>Download log</a>"; $tree =true;
+                        if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree")){
+                        echo ""; $alignement =true;
+                        if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree")){
+                            echo ""; $tree =true;
                         } else {
-                            echo "<div style='margin-left: 20px;'><div style='color:white' >Creating phylogenomic Tree : Running<span id='wait'>.</span></div></div>
-
+                            echo "<h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
+                  <ul style='padding-left: 40px;'>
+                        <li><h5 style='font-weight:normal'>•	<strong>Creating phylogenomic Tree : </strong>Running<span id='wait'>.</span></h5></li>
+</ul>
+<h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
 <script>
 var dots = window.setInterval( function() {
     var wait = document.getElementById('wait');
@@ -299,7 +348,11 @@ var dots = window.setInterval( function() {
 </script>";
                         }
                     } else {
-                        echo "<div style='color:white' >Alignement : Running<span id='wait'>.</span></div>
+                        echo "<h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
+                  <ul style='padding-left: 40px;'>
+                        <li><h5 style='font-weight:normal'>•	<strong>Alignement : </strong>Running<span id='wait'>.</span></h5></li>
+</ul>
+<h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
 
 <script>
 var dots = window.setInterval( function() {
@@ -312,7 +365,11 @@ var dots = window.setInterval( function() {
 </script>";
                     }
                     } else {
-                        echo "<div style='color:white' >Creating phylogenetic bootstrap : Running<span id='wait'>.</span></div>
+                        echo "<h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
+                  <ul style='padding-left: 40px;'>
+                        <li><h5 style='font-weight:normal'>•	<strong>Creating phylogenomic Tree : </strong>Running<span id='wait'>.</span></h5></li>
+</ul>
+<h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
 
 <script>
 var dots = window.setInterval( function() {
@@ -325,7 +382,11 @@ var dots = window.setInterval( function() {
 </script>";
                     }
                     } else {
-                    echo "<div style='color:white' >Collecting Single Copy : Running<span id='wait'>.</span></div>
+                    echo "<h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
+                  <ul style='padding-left: 40px;'>
+                        <li><h5 style='font-weight:normal'>•	<strong>Collecting Single Copy : </strong>Running<span id='wait'>.</span></h5></li>
+</ul>
+<h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
 
 <script>
 var dots = window.setInterval( function() {
@@ -339,8 +400,13 @@ var dots = window.setInterval( function() {
                 }
                 } else {
                     
-                  if($total_dirs>0){ echo "<div style='color:white' >Busco : Running<span id='wait'>.</span> $total_dirs/$total_items </div><br><div></div>
-
+                  if($total_dirs>0){ $pourcentage =($total_dirs*100)/$total_items; echo "
+                    <h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
+                  <ul style='padding-left: 40px;'>
+                        <li><h5 style='font-weight:normal'>•	<strong>Busco : </strong>Running<span id='wait'>.</span> $total_dirs/$total_items</h5></li>
+                        <li><h5 style='font-weight:normal'>•	<strong>Current genome : </strong>".shell_exec('cd '.dirname(dirname(__DIR__))."/admin/core/".$description.'outBusco/ ; ls -td -- * | head -n 1')."</h5></li>
+</ul>
+<h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
 <script>
 var dots = window.setInterval( function() {
     var wait = document.getElementById('wait');
@@ -350,7 +416,11 @@ var dots = window.setInterval( function() {
         wait.innerHTML += '.';
     }, 200);
 </script>";
-                } else {echo "<div style='color:white' >Busco : Getting things ready for process<span id='wait2'>.</span></div>
+                } else {echo "<h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
+                  <ul style='padding-left: 40px;'>
+                        <li><h5 style='font-weight:normal'>•	<strong>Busco : </strong>Getting things ready for process <span id='wait2'>.</span></h5></li>
+</ul>
+<h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
                 <script>
 var dots = window.setInterval( function() {
     var wait = document.getElementById('wait2');
@@ -360,7 +430,141 @@ var dots = window.setInterval( function() {
         wait.innerHTML += '.';
     }, 200);
 </script>";}
-                 } ?>
+                 }
+                      if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."BuscoPhylo.log")){
+                          $txt_file = fopen(dirname(dirname(__DIR__))."/admin/core/".$description."BuscoPhylo.log",'r');
+$a = 1;
+?><div id='scroll' style='height: 400px; overflow-y: scroll;'><?php
+
+while ($line = fgets($txt_file)) {
+ $nwk = $line;
+ echo "<h5 style='font-weight:normal'>$nwk</h5>";
+ $a++;
+}
+?></div><?php
+fclose($txt_file);
+                      } else
+                      if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."phylo.log")){
+                          $txt_file = fopen(dirname(dirname(__DIR__))."/admin/core/".$description."phylo.log",'r');
+$a = 1;
+?><div id='scroll' style='height: 400px; overflow-y: scroll;'><?php
+
+while ($line = fgets($txt_file)) {
+ $nwk = $line;
+ echo "<h5 style='font-weight:normal'>$nwk</h5>";
+ $a++;
+}
+?></div><?php
+fclose($txt_file);
+                      } else
+                      if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."busco.log")){
+                          $txt_file = fopen(dirname(dirname(__DIR__))."/admin/core/".$description."busco.log",'r');
+$a = 1;
+?><div id='scroll' style='height: 400px; overflow-y: scroll;'><?php
+
+while ($line = fgets($txt_file)) {
+ $nwk = $line;
+ echo "<h5 style='font-weight:normal'>$nwk</h5>";
+ $a++;
+}
+?></div><?php
+fclose($txt_file);
+                      }
+                      
+                  }
+                if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree")){
+                    $txt_file = fopen(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree",'r');
+$a = 1;
+while ($line = fgets($txt_file)) {
+ $nwk = $line;
+ $a++;
+}
+fclose($txt_file);
+?> <!-- <img src="<?php // echo "../../admin/core/".$description."out/Tree.png"; ?>" alt="PhyloTree"><br> -->
+<style>
+    input[type="checkbox"]{
+    -webkit-appearance: radio;
+}
+</style>
+
+<?php
+if((!isset($_SESSION['tree1']) || $_SESSION['tree1']=="") && (!isset($_SESSION['tree2']) || $_SESSION['tree2']=="")){
+    $tree = 'tree';
+} else if((!isset($_SESSION['tree1']) || $_SESSION['tree1']=="") && (isset($_SESSION['tree2']) && $_SESSION['tree2']!="")){
+    $tree = $_SESSION['tree2'];
+} else if((isset($_SESSION['tree1']) && $_SESSION['tree1']!="") && (!isset($_SESSION['tree2']) || $_SESSION['tree2']=="")){
+    $tree = $_SESSION['tree1'];
+} else {
+    $tree = 'tree_no';
+}
+?>
+
+<h4 style="color: #000022; padding: 10px 10px;" id="download"><i class="fa-solid fa-download"></i> Result files</h4>
+<div id="box">
+<a class='categories__item' href='../../admin/core/<?php echo $description; ?>out/<?php echo $tree; ?>.svg' style='margin-left: 10px;margin-bottom: 10px;' download><i class="fa-solid fa-image" style="margin-right: 3px"></i>Download image (SVG)</a>
+<a class='categories__item' href='../../admin/core/<?php echo $description; ?>out/<?php echo $tree; ?>.png' style='margin-left: 10px;margin-bottom: 10px;' download><i class="fa-solid fa-image" style="margin-right: 3px"></i>Download image (PNG)</a>
+<a class='categories__item' href='../../admin/core/<?php echo $description; ?>out/<?php echo $tree; ?>.pdf' style='margin-left: 10px;margin-bottom: 10px;' download><i class="fa-solid fa-file-pdf" style="margin-right: 3px"></i>Download pdf</a>
+<?php if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."Result.zip")){?>
+<a class='categories__item' href='../../admin/core/<?php echo $description; ?>Result.zip' style='margin-left: 10px;margin-bottom: 10px;'><i class='fa-solid fa-file-zipper' style='margin-right: 3px'></i>Download Result (<?php echo shell_exec('cd '.dirname(dirname(__DIR__))."/admin/core/".$description.' ; ls -l --b=MB  Result.zip | cut -d " " -f5'); ?>)</a>
+<?php } else { ?>
+<a class='categories__item' href='#' style='margin-left: 10px;margin-bottom: 10px;'><i class='fa-solid fa-file-zipper' style='margin-right: 3px'></i>ZIP being created <span id='wait'>.</span></a>
+<script>
+var dots = window.setInterval( function() {
+    var wait = document.getElementById('wait');
+    if ( wait.innerHTML.length > 3 ) 
+        wait.innerHTML = '';
+    else 
+        wait.innerHTML += '.';
+    }, 200);
+</script>
+<script> setTimeout(function(){ window.location.reload(1);}, 30000);</script>
+<?php } ?>
+<?php if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."BuscoPhylo.log")){?>
+<a class='categories__item' href='../../admin/core/<?php echo $description; ?>BuscoPhylo.log' style='margin-left: 10px;margin-bottom: 10px;' download><i class='fa-solid fa-file' style='margin-right: 3px'></i>Download log</a><?php } else { ?>
+<a class='categories__item' href='../../admin/core/<?php echo $description; ?>BuscoPhylo.log' style='margin-left: 10px;margin-bottom: 10px;' download><i class='fa-solid fa-file' style='margin-right: 3px'></i>Download log</a><?php } ?>
+</div>
+<h4 style="color: #000022; padding: 10px 10px; margin-top: 10px;"><i class="fa-solid fa-diagram-project"></i> Phylogram</h4>
+<style>
+    #<?php if($tree=="tree_no"){echo "tree_nonode{
+        background-color: orange;
+    } #tree_nolength";} else {echo $tree;} ?> {
+        background-color: orange;
+    }
+    #<?php if($tree=="tree_no"){echo "tree_nonode:hover {
+        background-color: #000022;
+    } #tree_nolength";} else {echo $tree;} ?>:hover {
+        background-color: #000022;
+    }
+    @media only screen and (min-width: 900px) {
+        #break{
+            display: none;
+        }
+    }
+</style>
+<div>
+      <input type="checkbox" id="nonode" name="nonode"
+             onclick="location.href='/const/draws/echo.php?value=nonode&item=<?php echo $item_id; ?>&title=<?php echo $title; ?>';" <?php if($_SESSION['tree1']=="tree_nonode"){echo "checked";} ?>>
+      <label for="nonode" style="margin-top:3px;margin-right:10px;">disable bootstrap</label>
+    <br id="break">
+      <input type="checkbox" id="nonode" name="nonode"
+             onclick="location.href='/const/draws/echo.php?value=nolength&item=<?php echo $item_id; ?>&title=<?php echo $title; ?>';" <?php if($_SESSION['tree2']=="tree_nolength"){echo "checked";} ?>>
+      <label for="nonode" style="margin-top:3px;margin-right:10px;">disable branch length</label>
+    </div>
+
+<center><img src="../../admin/core/<?php echo $description; ?>out/<?php echo $tree; ?>.svg" alt="Tree" style="border: 1px solid #000022; border-radius: 10px; margin-top: 20px;"></center>
+    
+
+<style>
+    .categories__item{
+        color: white;
+    }
+    body {
+        background-color: #f6f6f6;
+    }
+</style>
+<?php
+                } else { ?><script> setTimeout(function(){ window.location.reload(1);}, 5000);</script><?php }
+                 ?>
                 </div>
               </div>
             </div>
@@ -470,8 +674,8 @@ var dots = window.setInterval( function() {
           <?php if($run_time=="Running"){ ?>
             
             <?php
-                if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/RAxML_bipartitions.output_bootstrap.tre")){
-                    $txt_file = fopen(dirname(dirname(__DIR__))."/admin/core/".$description."out/RAxML_bipartitions.output_bootstrap.tre",'r');
+                if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree")){
+                    $txt_file = fopen(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree",'r');
 $a = 1;
 while ($line = fgets($txt_file)) {
  $nwk = $line;
@@ -499,10 +703,10 @@ fclose($txt_file);
                     if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."busco")){
                         $singlecopy =true;
                         if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/RAxML_bootstrap.nwk")){
-                        if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/RAxML_bipartitions.output_bootstrap.tre")){
+                        if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree")){
                         echo "<a class='categories__item' href='../../admin/core/{$description}Result.zip' style='margin-left: 10px;'><i class='fa-solid fa-file-zipper' style='margin-right: 3px'></i>Download Result</a>"; $alignement =true;
-                        if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/RAxML_bipartitions.output_bootstrap.tre")){
-                            echo "<a class='categories__item' href='../../admin/core/{$description}BBPA.log' style='margin-left: 10px;' download><i class='fa-solid fa-file' style='margin-right: 3px'></i>Download log</a>"; $tree =true;
+                        if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree")){
+                            echo "<a class='categories__item' href='../../admin/core/{$description}BuscoPhylo.log' style='margin-left: 10px;' download><i class='fa-solid fa-file' style='margin-right: 3px'></i>Download log</a>"; $tree =true;
                         } else {
                             echo "<div style='margin-left: 20px;'><div>Creating phylogenomic Tree : Running<span id='wait'>.</span></div></div>
 
