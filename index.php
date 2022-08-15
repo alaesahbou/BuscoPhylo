@@ -5,7 +5,11 @@ error_reporting(0);
 ini_set('display_errors', 0);
 require_once('nohup.php');
 
+if(file_exists('db/config.php')){
 require_once('db/config.php');
+} else {
+header("location:db/install.php");
+}
 require_once('const/web-info.php');
 require_once('const/check_session.php');
 require_once('const/my_profile.php');
