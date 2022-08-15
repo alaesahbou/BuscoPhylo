@@ -26,20 +26,21 @@ graph TD
  ```      
  
 # Installation
-## Source
-Download the application from GitHub https://github.com/alaesahbou/BuscoPhylo, and extract the zipped file in your server (xampp, ampps, WAMP, online server …)
+
+1.Download the application and extract the zipped file in your server (xampp, ampps, WAMP, online server …)
 Then configure your database setting by editing the file <code>config.app.php</code>
 ````bash
 # Download the BuscoPhylo source code 
 git clone https://github.com/alaesahbou/BuscoPhylo.git
 # Move the the BuscoPhylo dir to your your server (exmaple here lampp)
-mv BuscoPhylo /opt/lampp/htdocs/
+mv BuscoPhylo /usr/local/ampps/www/
 # Login as Root
 sudo -s
 # Give daemon access folder
 chown daemon path/to/app_dir
-````
 
+````
+2. 
 ## Configure php
 ````bash
 # open the file with a text manger
@@ -76,6 +77,8 @@ post_max_size=8000M
 - pdf png svg files for phylogenomic tree
 
 
+# License
+BuscoPhylo is licensed under the MIT License.
 
 # Citations
 If BuscoPhylo helped with the analysis of your data, please do not forget to cite:
