@@ -208,7 +208,7 @@ def main():
     print("")
 
     os.system("iqtree -s SUPERMATRIX.aln -bb 1000 -alrt 1000 -nt AUTO -ntmax " + str(threads) + " > /dev/null")
-    os.system("FastTree -boot 1000  SUPERMATRIX.aln" + " > SUPERMATRIX.tree")
+    # os.system("FastTree -boot 1000  SUPERMATRIX.aln" + " > SUPERMATRIX.tree")
     # if outg:
     #     os.system("raxmlHPC -f a -m PROTGAMMAAUTO -p 12345 -x 12345 -# 100 -s SUPERMATRIX.aln -n nwk " + " -o " + outg + " -T " + str(threads))
     #     os.system("raxmlHPC-PTHREADS -s " + " -o " + outg  )
