@@ -13,7 +13,7 @@ DEFINE('DBUser', '".$_POST['Username']."');\n
 DEFINE('DBPass','".$_POST['Password']."');\n
 
 //Database Name:\n
-DEFINE('DBName','busco_laravel2');\n
+DEFINE('DBName','busco_laravel');\n
 
 //Character set:\n
 DEFINE('DBCharset','utf8mb4');\n
@@ -39,7 +39,7 @@ if($link === false){
 }
  
 // Attempt create database query execution
-$sql = "CREATE DATABASE busco_laravel2";
+$sql = "CREATE DATABASE busco_laravel";
 if(mysqli_query($link, $sql)){
     echo "Database created successfully";
 } else{
@@ -49,7 +49,7 @@ if(mysqli_query($link, $sql)){
 // Close connection
 mysqli_close($link);
 
-$database = "busco_laravel2"; //Change Your Database Name
+$database = "busco_laravel"; //Change Your Database Name
 $conn = new mysqli($servername, $username, $password, $database);
 
 // Create database
