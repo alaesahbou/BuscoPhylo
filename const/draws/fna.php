@@ -80,65 +80,6 @@ fclose($fp);
 {
   echo "Connection failed: " . $e->getMessage();
 }
-} else if($output=="Progress"){
-if (!file_exists(dirname(dirname(__DIR__))."/results_2.json")) {
-    $fp = fopen(dirname(dirname(__DIR__)).'/results_2.json', 'w');
-    fwrite($fp, json_encode($response));
-    fclose($fp);
-}
-$json = file_get_contents(dirname(dirname(__DIR__)).'/results_2.json');
- $data = json_decode($json,true);
-  if (!empty($data["posts"][0]["output"])) {
-    $output = $data["posts"][0]["output"];
-  } else { $output = 'Done'; }
-  if ($output=='Done') {
-  try {
-$conn = new PDO('mysql:host='.DBHost.';dbname='.DBName.';charset='.DBCharset.';collation='.DBCollation.';prefix='.DBPrefix.'', DBUser, DBPass);
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-$stmt = $conn->prepare("SELECT * FROM tbl_items WHERE run_time='Waiting list' ORDER BY c_id LIMIT 1");
-$stmt->execute();
-$result = $stmt->fetchAll();
-if (count($result) < 1) {
-  
-} else {
-$response = array();
-$posts = array();
-foreach($result as $row)
-{
-$st1 = preg_replace("/[^a-zA-Z]/", " ", $row[1]);
-$st2 =  preg_replace('/\s+/', ' ', $st1);
-$item_title = strtolower(str_replace(' ', '-', $st2));
-
-$title = $row[1];
-$description = $row[3];
-$age = $row[7];
-$type = "f*";
-$genres = $row[9];
-$email = $row[17];
-$outgroup = $row[15];
-
-if ($rates < 10) {
-  $rates = ''.$rates.'.0';
-}
-$posts[] = array('ID'=> $row[2], 'name'=> $title, 'lineage'=> $age, 'outgroup'=> $outgroup, 'mode'=> $genres, 'input'=> $description, 'output'=> 'Running', 'type'=> $type, 'email'=> $email);
-
-$stmt = $conn->prepare("UPDATE tbl_items SET run_time='Running' WHERE item_id = ?");
-$stmt->execute([$row[2]]);
-
-}
-$response['posts'] = $posts;
-
-$fp = fopen(dirname(dirname(__DIR__)).'/results_2.json', 'w');
-fwrite($fp, json_encode($response));
-fclose($fp);
-
-}
-}catch(PDOException $e)
-{
-  echo "Connection failed: " . $e->getMessage();
-}
-}
 }
 
 
@@ -297,20 +238,20 @@ ini_set('display_errors', 0);
                 <div class="dashbox__table-wrap dashbox__table-wrap--2">
                     <h4 style="color: #000022; padding: 10px 10px;"><i class="fa-solid fa-circle-info"></i> Project Details</h4>
                     <ul style="padding-left: 40px;">
-                        <li><h5 style="font-weight:normal">•	<strong>Name : </strong><?php echo $title; ?></h5></li>
-                        <li><h5 style="font-weight:normal">•	<strong>Job ID : </strong><?php echo $item_id; ?></h5></li>
-                        <li><h5 style="font-weight:normal">•	<strong>Lineage : </strong><?php echo $age; ?></h5></li>
-                        <li><h5 style="font-weight:normal">•	<strong>Mode : </strong><?php echo $row[9]; ?></h5></li>
-                        <li><h5 style="font-weight:normal">•	<strong><?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/admin/core/'.$description.'out/proteins/')){
+                        <li><h5 style="font-weight:normal">•    <strong>Name : </strong><?php echo $title; ?></h5></li>
+                        <li><h5 style="font-weight:normal">•    <strong>Job ID : </strong><?php echo $item_id; ?></h5></li>
+                        <li><h5 style="font-weight:normal">•    <strong>Lineage : </strong><?php echo $age; ?></h5></li>
+                        <li><h5 style="font-weight:normal">•    <strong>Mode : </strong><?php echo $row[9]; ?></h5></li>
+                        <li><h5 style="font-weight:normal">•    <strong><?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/admin/core/'.$description.'out/proteins/')){
     echo exec('ls '.$_SERVER['DOCUMENT_ROOT'].'/admin/core/'.$description.'out/proteins/ | wc -l');}?></strong> BUSCOs are single copy in all <strong><?php echo exec('ls '.$_SERVER['DOCUMENT_ROOT'].'/admin/core/'.$description.'*.f* | wc -l');?></strong> species</h5></li>
                 </ul>
                 <div style="padding: 10px 10px; border: none; color: #000022;">
                     <h4><i class="fa-solid fa-file-invoice"></i> Method</h4>
                     <ul style="padding-left: 30px;">
-                        <li><h5 style="font-weight:normal">•	BUSCO searches  was performed on each genome using BUSCO V5 (Simão et al., 2015).</h5></li>
-                        <li><h5 style="font-weight:normal">•	Alignments was performed using Muscle and trimAl (Edgar, 2004; Capella-Gutiérrez et al., 2009).</h5></li>
-                        <li><h5 style="font-weight:normal">•	ML tree was inferred using IQ-TREE version 1.6.12 (Nguyen et al., 2015) with the model selection from ModelFinder (Kalyaanamoorthy et al., 2017) using the following defaults parameters: “-bb 1000 -alrt 1000 -nt AUTO -ntmax”.</h5></li>
-                        <li><h5 style="font-weight:normal">•	The  tree file is visualized using ETE Toolkit (Huerta-Cepas et al., 2016).</h5></li>
+                        <li><h5 style="font-weight:normal">•    BUSCO searches  was performed on each genome using BUSCO V5 (Simão et al., 2015).</h5></li>
+                        <li><h5 style="font-weight:normal">•    Alignments was performed using Muscle and trimAl (Edgar, 2004; Capella-Gutiérrez et al., 2009).</h5></li>
+                        <li><h5 style="font-weight:normal">•    ML tree was inferred using IQ-TREE version 1.6.12 (Nguyen et al., 2015) with the model selection from ModelFinder (Kalyaanamoorthy et al., 2017) using the following defaults parameters: “-bb 1000 -alrt 1000 -nt AUTO -ntmax”.</h5></li>
+                        <li><h5 style="font-weight:normal">•    The  tree file is visualized using ETE Toolkit (Huerta-Cepas et al., 2016).</h5></li>
                         <li><h6 style="font-weight:normal">(These texts may be used for your publication.)</h6></li>
                 </ul>
                 </div>
@@ -334,7 +275,7 @@ ini_set('display_errors', 0);
                         } else {
                             echo "<h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
                   <ul style='padding-left: 40px;'>
-                        <li><h5 style='font-weight:normal'>•	<strong>Creating phylogenomic Tree : </strong>Running<span id='wait'>.</span></h5></li>
+                        <li><h5 style='font-weight:normal'>•    <strong>Creating phylogenomic Tree : </strong>Running<span id='wait'>.</span></h5></li>
 </ul>
 <h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
 <script>
@@ -350,7 +291,7 @@ var dots = window.setInterval( function() {
                     } else {
                         echo "<h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
                   <ul style='padding-left: 40px;'>
-                        <li><h5 style='font-weight:normal'>•	<strong>Alignement : </strong>Running<span id='wait'>.</span></h5></li>
+                        <li><h5 style='font-weight:normal'>•    <strong>Alignement : </strong>Running<span id='wait'>.</span></h5></li>
 </ul>
 <h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
 
@@ -367,7 +308,7 @@ var dots = window.setInterval( function() {
                     } else {
                         echo "<h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
                   <ul style='padding-left: 40px;'>
-                        <li><h5 style='font-weight:normal'>•	<strong>Creating phylogenomic Tree : </strong>Running<span id='wait'>.</span></h5></li>
+                        <li><h5 style='font-weight:normal'>•    <strong>Creating phylogenomic Tree : </strong>Running<span id='wait'>.</span></h5></li>
 </ul>
 <h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
 
@@ -384,7 +325,7 @@ var dots = window.setInterval( function() {
                     } else {
                     echo "<h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
                   <ul style='padding-left: 40px;'>
-                        <li><h5 style='font-weight:normal'>•	<strong>Collecting Single Copy : </strong>Running<span id='wait'>.</span></h5></li>
+                        <li><h5 style='font-weight:normal'>•    <strong>Collecting Single Copy : </strong>Running<span id='wait'>.</span></h5></li>
 </ul>
 <h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
 
@@ -403,8 +344,8 @@ var dots = window.setInterval( function() {
                   if($total_dirs>0){ $pourcentage =($total_dirs*100)/$total_items; echo "
                     <h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
                   <ul style='padding-left: 40px;'>
-                        <li><h5 style='font-weight:normal'>•	<strong>Busco : </strong>Running<span id='wait'>.</span> $total_dirs/$total_items</h5></li>
-                        <li><h5 style='font-weight:normal'>•	<strong>Current genome : </strong>".shell_exec('cd '.dirname(dirname(__DIR__))."/admin/core/".$description.'outBusco/ ; ls -td -- * | head -n 1')."</h5></li>
+                        <li><h5 style='font-weight:normal'>•    <strong>Busco : </strong>Running<span id='wait'>.</span> $total_dirs/$total_items</h5></li>
+                        <li><h5 style='font-weight:normal'>•    <strong>Current genome : </strong>".shell_exec('cd '.dirname(dirname(__DIR__))."/admin/core/".$description.'outBusco/ ; ls -td -- * | head -n 1')."</h5></li>
 </ul>
 <h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
 <script>
@@ -418,7 +359,7 @@ var dots = window.setInterval( function() {
 </script>";
                 } else {echo "<h4 style='padding-left: 10px;'><i class='fa-solid fa-spinner fa-spin-pulse fa-spin-reverse'></i> Progress</h4>
                   <ul style='padding-left: 40px;'>
-                        <li><h5 style='font-weight:normal'>•	<strong>Busco : </strong>Getting things ready for process <span id='wait2'>.</span></h5></li>
+                        <li><h5 style='font-weight:normal'>•    <strong>Busco : </strong>Getting things ready for process <span id='wait2'>.</span></h5></li>
 </ul>
 <h6 style='padding-left: 40px; font-weight: normal;'>(You will receive an email when your job is completed)</h6>
                 <script>
