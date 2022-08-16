@@ -98,6 +98,6 @@ fwrite($fp, json_encode($response));
 fclose($fp);
 
 }
-echo exec('whoami');
 
 ?>
+
