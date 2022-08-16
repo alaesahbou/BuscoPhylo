@@ -24,8 +24,7 @@ graph TD
  ```      
  
 # Installation
-## Instaltion on Ubuntu ()with Xampp 
-1. Download the application and extract the zipped file in your server (xampp, ampps, WAMP, online server …)
+1. Download the application and extract the zipped file in your web server (xampp, ampps, WAMP, online server …)
 Then configure your database setting by editing the file <code>config.app.php</code>
 ````bash
 # Download the BuscoPhylo source code 
