@@ -69,12 +69,12 @@ post_max_size=8000M
 - File names will be used as leaf labels 
 - We recommand this format <code>Genus_species_strain.fasta</code>
 
-## Genes input portal
+## GUI input portal
 <center><img src="https://user-images.githubusercontent.com/60272832/183297851-9c4afdb6-7e73-4a54-b31a-2e24aedbbb88.png"></center>
 
 ## Output files
-- outBusco dir contain Busco runs
-- out dir containing the ML tree, logs, proteins and alignments
+- outBusco directory containing Busco runs
+- out directory containing the ML tree, logs, BSCg as proteins and alignments
 - pdf png svg files for phylogenomic tree
 
 
@@ -88,4 +88,4 @@ If BuscoPhylo helped with the analysis of your data, please do not forget to cit
 - Muscle and trimAl (Edgar, 2004; Capella-Gutiérrez et al., 2009).
 - ML tree was inferred using IQ-TREE version 1.6.12 (Nguyen et al., 2015) with the model selection from ModelFinder (Kalyaanamoorthy et al., 2017) using the following defaults parameters: “-bb 1000 -alrt 1000 -nt AUTO -ntmax”.
 - The tree file is visualized using ETE Toolkit (Huerta-Cepas et al., 2016).
-- Phylogenomics analyses were conducted in BuscoPhylo (Sahbou et al., 2022).
+- Phylogenomics analyses were conducted in BuscoPhylo (Sahbou et al., 2022)(<i>in preparation</i>).
