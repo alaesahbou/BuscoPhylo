@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
 try {
 $conn = new PDO('mysql:host='.DBHost.';dbname='.DBName.';charset='.DBCharset.';collation='.DBCollation.';prefix='.DBPrefix.'', DBUser, DBPass);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
