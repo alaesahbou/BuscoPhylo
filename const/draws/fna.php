@@ -285,6 +285,9 @@ ini_set('display_errors', 0);
                   <div class="dashbox__table-wrap dashbox__table-wrap--2">
                   <div style="padding: 10px 10px;border: none;"><img src="../../img/logo-1.png" id="logoh" width="10%" style="float: left; margin-left: 20%; margin-right: 10px;" > <h2 style="color: #000022;margin-top: 1%;">Phylogenomics analysis pipeline by <?php echo AppName; ?></h2></div>
                   <?php 
+                  if(!file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree")){
+                  ?><a class='categories__item' href='../../admin/core/delete.php?q=<?php echo $item_id; ?>' style='width: 7%; margin-left: 90%;background-color: red;'><i class="fa-solid fa-trash" style="margin-right: 5px;"></i>Delete</a><?php } ?>
+                  <?php 
                   if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree")){
                   ?>
                 <div class="dashbox__title" style="margin-bottom: -2%;display: none;">
