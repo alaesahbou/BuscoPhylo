@@ -40,7 +40,7 @@ mv BuscoPhylo /usr/local/ampps/www/
 ````bash
 # Give BuscoPhylo root privileges using the following command
 
-sudo vim /etc/sudoers
+sudo visudo
 
 # insert th following lines after User privilege specification comment 
 
