@@ -50,7 +50,7 @@ post_max_size=8000M
 ````
 3. Open BuscoPhylo tool via localhost on you browser (http://localhost/BuscoPhylo/)
 4. Connect BuscoPhylo to mysql <br><br>
-<i>Enter your login and passwrod of your mysql server</i><br><br>
+<i>Enter your login and password of your mysql server</i><br><br>
 ![image](https://user-images.githubusercontent.com/60272832/184771731-24b16890-fd31-4444-83b3-6f8d340e15ff.png)
 # Requirements
 <ul>
@@ -66,7 +66,7 @@ post_max_size=8000M
 # Submitting a project
 ## Input Requirements
 - At least 4 Genome sequence files in FASTA format (.fa,.fsa,.fasta,.fna are supported)
-- The names of the file wiill be used as leaf labels 
+- File names will be used as leaf labels 
 - We recommand this format <code>Genus_species_strain.fasta</code>
 
 ## Genes input portal
