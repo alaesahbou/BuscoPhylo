@@ -283,7 +283,7 @@ ini_set('display_errors', 0);
 
               <div class="dashbox" style="background-color: white;">
                   <div class="dashbox__table-wrap dashbox__table-wrap--2">
-                  <div style="padding: 10px 10px;border: none;"><img src="/img/logo-1.png" id="logoh" width="10%" style="float: left; margin-left: 20%; margin-right: 10px;" > <h2 style="color: #000022;margin-top: 1%;">Phylogenomics analysis pipeline by <?php echo AppName; ?></h2></div>
+                  <div style="padding: 10px 10px;border: none;"><img src="../../img/logo-1.png" id="logoh" width="10%" style="float: left; margin-left: 20%; margin-right: 10px;" > <h2 style="color: #000022;margin-top: 1%;">Phylogenomics analysis pipeline by <?php echo AppName; ?></h2></div>
                   <?php 
                   if(file_exists(dirname(dirname(__DIR__))."/admin/core/".$description."out/SUPERMATRIX.aln.contree")){
                   ?>

@@ -10,7 +10,7 @@
           </button>
 
           <a href="<?php echo $dir; ?>" class="header__logo">
-              <img src="./img/logo-1.png" style="height:100px;" />
+              <img src="../../img/logo-1.png" style="height:100px;" />
           </a>
 
           <ul class="header__nav">

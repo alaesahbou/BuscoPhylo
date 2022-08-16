@@ -17,7 +17,7 @@ DEFINE('DBPass','');
 
 //Database Name:
 
-DEFINE('DBName','busco_laravel');
+DEFINE('DBName','busco_laravel2');
 
 
 //Character set:

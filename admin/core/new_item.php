@@ -8,7 +8,12 @@ require_once('../../const/my_profile.php');
 
 if (!empty($_POST['submit'])) {
 	if (!file_exists("data/")) {
-    mkdir("data");
+chmod("./", 0777);    
+$cmd = escapeshellcmd('sudo php '.dirname(__DIR__).'/busco.php');
+$dest = '/out.txt';
+popen("$cmd > $dest 2>&1 &", 'r');
+
+mkdir("data");
   }
   
   if (!file_exists("data/".$_POST['Project_Name'])) {
@@ -38,7 +43,6 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 // Check if file already exists
 if (file_exists($target_file)) {
-  echo "Sorry, file already exists.<br> change file name <br>";
   $uploadOk = 0;
 }
 
@@ -49,16 +53,13 @@ if (file_exists($target_file)) {
 
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-  echo "Sorry, your file was not uploaded.<br>";
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], $target_file)) {
-    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"][$i])). " has been uploaded.";
     
 
 
   } else {
-    echo "Sorry, there was an error uploading your file.\n";
   }
 }
 }
@@ -76,7 +77,7 @@ $item_id = time();
 $title = $name;
 $description = $z;
 $year = date("Y");
-$running_time = "Waiting List";
+$running_time = "Waiting list";
 $plan_type = "BUSCO";
 $age = $x;
 $up_type = $imageFileType;
@@ -106,20 +107,7 @@ $_SESSION["project"] = $item_id;
 
 
 
-require_once 'mail/mail.php';
-    $mail->setFrom('info@BBPA.com', 'BBPA');
-    $mail->addAddress($email);
-    $mail->Subject = "BBPA | ".$title;
-    $mail->Body    = 'Your Project '.$title.' Number '.$item_id.' is in Running You can check the progress in the link bellow : <br> http://'.$_SERVER[HTTP_HOST].'/item/'.$item_id.'/'.$title;
-
-   
-  //  $mail->addAttachment('files/' . $_POST['file']);    // Optional name
-    $mail->send();
     
-    
-$stmt = $conn->prepare("INSERT INTO tbl_time (item_id, start_time) VALUES (?,?)");
-$stmt->execute([$item_id, date("h:i:sa")]);
-
 
 header("location:../../process.php");
 
@@ -131,7 +119,8 @@ echo "Connection failed: " . $e->getMessage();
 
 
 }else{
-header("location:../../");
+// header("location:../../");
 }
 
 ?>
+

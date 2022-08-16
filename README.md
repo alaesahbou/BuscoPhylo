@@ -1,9 +1,10 @@
 # BuscoPhylo
+<img src="https://user-images.githubusercontent.com/22656460/184841359-acfdc023-d70f-46e1-9e65-d1c741a3465d.png" align="center" width="600">
+<br>
 Thanks to the advances in DNA sequencing technolgies, thousands of genome sequences of living organisms are being released in the public databases every day.  **BuscoPhylo** has been implemented to provide a fully automated and complete pipeline to quickly perform BUSCO-based phylogenomic analysis starting from assembled genome sequences as inputs. The BuscoPhylo is a free, on-line and user-friendly webserver accepting genome sequences in FASTA format as inputs and enabling to the user to export the tree ready for publication and all the results of the steps included in the pipeline for downstream analyses.
  <br>
-<img src="https://user-images.githubusercontent.com/22656460/182361469-27351a30-7a7d-441e-9824-967b1078b161.png" align="center" width="600">
-
 # BuscoPhylo workflow
+
 ```mermaid
 graph TD
     
@@ -15,9 +16,6 @@ graph TD
     f --> |<i>ETE3| g[Graphical Display]
     f --> h[Download Results]
  
-
-
-
         classDef green fill:#93FF33,stroke:#333,stroke-width:2px
         classDef blue fill:#00FA9A,stroke:#333,stroke-width:4px
        
@@ -34,14 +32,16 @@ Then configure your database setting by editing the file <code>config.app.php</c
 git clone https://github.com/alaesahbou/BuscoPhylo.git
 # Move the the BuscoPhylo dir to your your server (exmaple here lampp)
 mv BuscoPhylo /usr/local/ampps/www/
-# Login as Root
-sudo -s
-# Give daemon access folder
-chown daemon path/to/app_dir
-
 ````
-2. Configure php
+2. Setup the server
 ````bash
+# Give BuscoPhylo root privileges using the following command
+sudo chown -R daemon /BuscoPhylo_directory
+sudo visudo
+# insert th following lines after User privilege specification comment 
+# for xampp replace USER by daemon and for ampps replace USER by ampps
+[USER] ALL=(ALL:ALL) ALL
+[USER] ALL=(ALL) NOPASSWD: ALL
 # open the file with a text manger
 vim /etc/php5/cli/php.ini
 # change these lines:
@@ -49,7 +49,10 @@ max_file_uploads=5000
 upload_max_filesize=8000M
 post_max_size=8000M
 ````
-3. Open BuscoPhylo via localhost on you browser (http://localhost/BuscoPhylo/)
+3. Open BuscoPhylo tool via localhost on you browser (http://localhost/BuscoPhylo/)
+4. Connect BuscoPhylo to mysql <br><br>
+<i>Enter your login and passwrod of your mysql server</i><br><br>
+![image](https://user-images.githubusercontent.com/60272832/184771731-24b16890-fd31-4444-83b3-6f8d340e15ff.png)
 # Requirements
 <ul>
   <li><code><a href="https://busco.ezlab.org/busco_userguide.html">BUSCO</a></code></li>

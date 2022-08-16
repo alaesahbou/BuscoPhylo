@@ -57,7 +57,7 @@ $dlink = $_SERVER['REQUEST_SCHEME'] .'://'. $_SERVER['HTTP_HOST'].$_SERVER['REQU
 
 	<?php require_once('../const/draws/header_v2.php'); ?>
 	<?php require_once('../const/draws/fna.php'); ?>
-	<?php require_once('../const/draws/footer.php'); ?>
+	<?php require_once('../const/draws/footer_v2.php'); ?>
 
 	<script src="../../js/jquery-3.5.1.min.js"></script>
 	<script src="../../js/bootstrap.bundle.min.js"></script>
