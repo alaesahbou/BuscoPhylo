@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-exec('cd '.dirname(__DIR__).'/admin/core/ && sudo php '.dirname(__DIR__).'/busco.php');
+$cmd = escapeshellcmd('cd '.dirname(__DIR__).'/admin/core/ && sudo php '.dirname(__DIR__).'/busco.php');
+$dest = '/out.txt';
+popen("$cmd > $dest 2>&1 &", 'r');
 
 require_once('db/config.php');
 require_once('const/web-info.php');

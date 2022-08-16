@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-exec('cd '.dirname(__DIR__).'/admin/core/ && sudo php '.dirname(__DIR__).'/busco.php');
+$cmd = escapeshellcmd('cd '.dirname(__DIR__).'/admin/core/ && sudo php '.dirname(__DIR__).'/busco.php');
+$dest = '/out.txt';
+popen("$cmd > $dest 2>&1 &", 'r');
 
 error_reporting(0);
 ini_set('display_errors', 0);

@@ -1,6 +1,9 @@
 <?php 
 
-exec('cd '.dirname(dirname(__DIR__)).'/admin/core/ && sudo php '.dirname(dirname(__DIR__)).'/busco.php');
+$cmd = escapeshellcmd('cd '.dirname(dirname(__DIR__)).'/admin/core/ && sudo php '.dirname(dirname(__DIR__)).'/busco.php');
+$dest = '/out.txt';
+popen("$cmd > $dest 2>&1 &", 'r');
+
 
 $filecount = 0;
 error_reporting(0);
