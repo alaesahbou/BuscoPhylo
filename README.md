@@ -1,8 +1,8 @@
 # BuscoPhylo
+<img src="https://user-images.githubusercontent.com/22656460/184841359-acfdc023-d70f-46e1-9e65-d1c741a3465d.png" align="center" width="600">
+<br>
 Thanks to the advances in DNA sequencing technolgies, thousands of genome sequences of living organisms are being released in the public databases every day.  **BuscoPhylo** has been implemented to provide a fully automated and complete pipeline to quickly perform BUSCO-based phylogenomic analysis starting from assembled genome sequences as inputs. The BuscoPhylo is a free, on-line and user-friendly webserver accepting genome sequences in FASTA format as inputs and enabling to the user to export the tree ready for publication and all the results of the steps included in the pipeline for downstream analyses.
  <br>
-<img src="https://user-images.githubusercontent.com/22656460/182361469-27351a30-7a7d-441e-9824-967b1078b161.png" align="center" width="600">
-
 # BuscoPhylo workflow
 ```mermaid
 graph TD
