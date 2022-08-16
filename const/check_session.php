@@ -1,7 +1,5 @@
 <?php
-if(!isset($user_id)){
-  $user_id==""
-}
+
 if(!isset($_COOKIE["__logged"])) {
 $res = "0";
 } else {
