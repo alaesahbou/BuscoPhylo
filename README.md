@@ -64,15 +64,15 @@ post_max_size=8000M
 </ul>
 
 # Submitting a project
-## Input Requirements
+1. Input Requirements
 - At least 4 Genome sequence files in FASTA format (.fa,.fsa,.fasta,.fna are supported)
 - File names will be used as leaf labels 
 - We recommand this format <code>Genus_species_strain.fasta</code>
 
-## GUI input portal
+2. GUI input portal
 <center><img src="https://user-images.githubusercontent.com/60272832/183297851-9c4afdb6-7e73-4a54-b31a-2e24aedbbb88.png"></center>
 
-## Output files
+3. Output files
 - outBusco directory containing Busco runs
 - out directory containing the ML tree, logs, BSCg as proteins and alignments
 - pdf png svg files for phylogenomic tree
