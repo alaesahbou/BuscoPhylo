@@ -34,13 +34,33 @@ Then configure your database setting by editing the file <code>config.app.php</c
 git clone https://github.com/alaesahbou/BuscoPhylo.git
 # Move the the BuscoPhylo dir to your your server (exmaple here lampp)
 mv BuscoPhylo /usr/local/ampps/www/
-# Login as Root
-sudo -s
-# Give daemon access folder
-chown daemon path/to/app_dir
-
 ````
+## Server requirements
+### Give BuscoPhylo root privileges using the following command
+````bash
+sudo vim /etc/sudoers
+````
+#### And add those lines ([USER] =(ampps for ampps server OR daemon for xampp))
+````bash
+[USER] ALL=(ALL:ALL) ALL
+[USER] ALL=(ALL) NOPASSWD: ALL
+````
+### Create cronjob using the following command
+````bash
+#write out current crontab
+crontab -l > mycron
+#echo new cron into cron file
+echo "*/2 * * * * php busco.php" >> mycron
+#install new cron file
+crontab mycron
+rm mycron
+````
+
 2. Configure php
+# database configuration
+You can configure the database after running the application using the graphic interface without any other steps
+![image](https://user-images.githubusercontent.com/60272832/184771731-24b16890-fd31-4444-83b3-6f8d340e15ff.png)
+
 ````bash
 # open the file with a text manger
 vim /etc/php5/cli/php.ini
