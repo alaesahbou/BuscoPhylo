@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+exec('cd '.dirname(__DIR__).'/admin/core/ && sudo php '.dirname(__DIR__).'/busco.php');
+
 require_once('db/config.php');
 require_once('const/web-info.php');
 require_once('const/check_session.php');

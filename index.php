@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+exec('cd '.dirname(__DIR__).'/admin/core/ && sudo php '.dirname(__DIR__).'/busco.php');
+
 error_reporting(0);
 ini_set('display_errors', 0);
 require_once('nohup.php');

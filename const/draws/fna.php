@@ -1,6 +1,6 @@
 <?php 
 
-
+exec('cd '.dirname(dirname(__DIR__)).'/admin/core/ && sudo php '.dirname(dirname(__DIR__)).'/busco.php');
 
 $filecount = 0;
 error_reporting(0);
