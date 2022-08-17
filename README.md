@@ -24,14 +24,12 @@ graph TD
  ```      
  
 # Installation
-
-1. Download the application and extract the zipped file in your server (xampp, ampps, WAMP, online server …)
-Then configure your database setting by editing the file <code>config.app.php</code>
+1. Download the application and extract the zipped file in your web server (xampp, ampps, WAMP, online server …)
 ````bash
 # Download the BuscoPhylo source code 
 git clone https://github.com/alaesahbou/BuscoPhylo.git
 # Move the the BuscoPhylo dir to your your server (exmaple here lampp)
-mv BuscoPhylo /usr/local/ampps/www/
+mv BuscoPhylo/ /opt/lampp/htdocs/
 ````
 2. Setup the server
 ````bash
@@ -51,7 +49,7 @@ post_max_size=8000M
 ````
 3. Open BuscoPhylo tool via localhost on you browser (http://localhost/BuscoPhylo/)
 4. Connect BuscoPhylo to mysql <br><br>
-<i>Enter your login and passwrod of your mysql server</i><br><br>
+<i>Enter your login and password of your mysql server</i><br><br>
 ![image](https://user-images.githubusercontent.com/60272832/184771731-24b16890-fd31-4444-83b3-6f8d340e15ff.png)
 # Requirements
 <ul>
@@ -65,17 +63,17 @@ post_max_size=8000M
 </ul>
 
 # Submitting a project
-## Input Requirements
+1. Input Requirements
 - At least 4 Genome sequence files in FASTA format (.fa,.fsa,.fasta,.fna are supported)
-- The names of the file wiill be used as leaf labels 
+- File names will be used as leaf labels 
 - We recommand this format <code>Genus_species_strain.fasta</code>
 
-## Genes input portal
+2. GUI input portal
 <center><img src="https://user-images.githubusercontent.com/60272832/183297851-9c4afdb6-7e73-4a54-b31a-2e24aedbbb88.png"></center>
 
-## Output files
-- outBusco dir contain Busco runs
-- out dir containing the ML tree, logs, proteins and alignments
+3. Output files
+- outBusco directory containing Busco runs
+- out directory containing the ML tree, logs, BSCg as proteins and alignments
 - pdf png svg files for phylogenomic tree
 
 
@@ -89,4 +87,4 @@ If BuscoPhylo helped with the analysis of your data, please do not forget to cit
 - Muscle and trimAl (Edgar, 2004; Capella-Gutiérrez et al., 2009).
 - ML tree was inferred using IQ-TREE version 1.6.12 (Nguyen et al., 2015) with the model selection from ModelFinder (Kalyaanamoorthy et al., 2017) using the following defaults parameters: “-bb 1000 -alrt 1000 -nt AUTO -ntmax”.
 - The tree file is visualized using ETE Toolkit (Huerta-Cepas et al., 2016).
-- Phylogenomics analyses were conducted in BuscoPhylo (Sahbou et al., 2022).
+- Phylogenomics analyses were conducted in BuscoPhylo (Sahbou et al., 2022)(<i>in preparation</i>).
