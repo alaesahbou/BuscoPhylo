@@ -25,7 +25,6 @@ graph TD
  
 # Installation
 1. Download the application and extract the zipped file in your web server (xampp, ampps, WAMP, online server …)
-Then configure your database setting by editing the file <code>config.app.php</code>
 ````bash
 # Download the BuscoPhylo source code 
 git clone https://github.com/alaesahbou/BuscoPhylo.git
