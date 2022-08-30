@@ -82,7 +82,7 @@ post_max_size=8000M
 BuscoPhylo is licensed under the MIT License.
 
 # Reporting bugs and feedback
-If you have any suggestions, feedback and bug reports, please contact us at slimane.khayi[at]inra.ma or use the contact form on the website.
+If you have any suggestions, feedback and bug reports, please contact us at **slimane.khayi[at]inra.ma** or use [the contact form](https://buscophylo.inra.org.ma/contact) on the website.
 
 # Citations
 If BuscoPhylo helped with the analysis of your data, please do not forget to cite:
