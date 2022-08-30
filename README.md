@@ -84,8 +84,8 @@ BuscoPhylo is licensed under the MIT License.
 # Citations
 If BuscoPhylo helped with the analysis of your data, please do not forget to cite:
 
+- Phylogenomics analyses were conducted in BuscoPhylo [(Sahbou et al., 2022)](!https://www.researchsquare.com/article/rs-1997596/v1)
 - BUSCO V5 (Simão et al., 2015).
 - Muscle and trimAl (Edgar, 2004; Capella-Gutiérrez et al., 2009).
 - ML tree was inferred using IQ-TREE version 1.6.12 (Nguyen et al., 2015) with the model selection from ModelFinder (Kalyaanamoorthy et al., 2017) using the following defaults parameters: “-bb 1000 -alrt 1000 -nt AUTO -ntmax”.
 - The tree file is visualized using ETE Toolkit (Huerta-Cepas et al., 2016).
-- Phylogenomics analyses were conducted in BuscoPhylo (Sahbou et al., 2022)(<i>in preparation</i>).
