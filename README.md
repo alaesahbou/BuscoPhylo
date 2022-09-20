@@ -56,15 +56,13 @@ post_max_size=8000M
 <i>Enter your login and password of your mysql server</i><br><br>
 ![image](https://user-images.githubusercontent.com/60272832/184771731-24b16890-fd31-4444-83b3-6f8d340e15ff.png)
 # Requirements
-<ul>
-  <li><code><a href="https://busco.ezlab.org/busco_userguide.html">BUSCO</a></code></li>
-  <li><code><a href="https://www.python.org/">Python</a></code></li>
-  <li><code><a href="https://biopython.org/">BioPython</a></code></li>
-  <li><code><a href="https://www.drive5.com/muscle/">MUSCLE (v5)</a></code></li>
-  <li><code><a href="http://trimal.cgenomics.org/">trimAl</a></code></li>
-  <li><code><a href="http://www.iqtree.org/" >IQ-TREE</a></code></li>
-  <li><code><a href="http://etetoolkit.org/download/">ETE3</a></code></li>
-</ul>
+- [<b>Python3](https://www.python.org/)(<code> sudo apt install python3</code>)
+- [<b>Busco](https://busco.ezlab.org/)(<code>conda install -c bioconda busco</code>)
+- [<b>Biopython](https://biopython.org/)(<code>conda install -c conda-forge biopython</code>)
+- [<b>MUSCLE](https://www.drive5.com/muscle/)(<code>conda install -c bioconda muscle</code>)
+- [<b>trimAl](http://trimal.cgenomics.org/)(<code>conda install -c bioconda trimal</code>)
+- [<b>IQ-TREE](http://www.iqtree.org/)(<code>conda install -c bioconda iqtree</code>)
+- [<b>ETE3](http://etetoolkit.org/)(<code>conda install -c etetoolkit ete3</code>)
 
 # Submitting a project
 1. Input Requirements
