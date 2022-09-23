@@ -35,7 +35,7 @@ $output = shell_exec('cd '.$path.'/'.$data["posts"][0]['input']);
 	
 $output = shell_exec('mkdir '.$path.'/'.$data["posts"][0]['input'].'outBusco');
 
-$output = shell_exec('for file in '.$path.'/'.$data["posts"][0]['input'].'*.'.$data["posts"][0]['type'].' ; do output=$(basename ${file%%.'.$data["posts"][0]['type'].'*}) ; busco -i $file -l '.$data["posts"][0]['lineage'].' -o $output -m '.$data["posts"][0]['mode'].' --out_path  '.$path.'/'.$data["posts"][0]['input'].'outBusco >> '.$path.'/'.$data["posts"][0]['input'].'busco.log ; done ');
+$output = shell_exec('for file in '.$path.'/'.$data["posts"][0]['input'].'*.'.$data["posts"][0]['type'].' ; do output=$(basename ${file%%.'.$data["posts"][0]['type'].'*}) ; busco -i $file -l '.$data["posts"][0]['lineage'].' -o $output -m '.$data["posts"][0]['mode'].' --out_path  '.$path.'/'.$data["posts"][0]['input'].'outBusco --cpu '.shell_exec('nproc').' >> '.$path.'/'.$data["posts"][0]['input'].'busco.log ; done ');
 
 
 
