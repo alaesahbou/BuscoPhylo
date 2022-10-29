@@ -78,7 +78,8 @@ post_max_size=8000M
 - **out** directory containing the ML tree, logs, BSCg as proteins and alignments
 - **pdf**, **png** and **svg** files for phylogenomic tree
 
-
+# BuscoPhylo webserver
+BuscoPhylo webserver is freely accessible at [https://Buscophylo.inra.org.ma](https://buscophylo.inra.org.ma/)
 # License
 BuscoPhylo is licensed under the MIT License.
 
