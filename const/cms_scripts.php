@@ -1,4 +1,4 @@
   <script>
   //Custom Scripts
-  <?php echo AppCustomScript; ?>
+  <?php //echo AppCustomScript; ?>
   </script>
