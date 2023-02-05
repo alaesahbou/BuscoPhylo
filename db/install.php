@@ -25,7 +25,6 @@ ini_set('display_errors', 0);
   <meta name="keywords" content="BuscoPhylo">
   <meta name="author" content="Bwire Mashauri">
   <title>Install BuscoPhylo</title>
-  <?php require_once('../const/cms_scripts.php'); ?>
 
 </head>
 
