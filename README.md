@@ -97,11 +97,11 @@ To use the BuscoPhylo API, import the buscophylo module and initiate an instance
 from buscophylo import BuscoPhylo
 
 buscophylo = BuscoPhylo()
-buscophylo.Token("BUSCOPHYLO_63dff5936264b1675621779")
-buscophylo.Project_Name("test_api_v0.2.2")
-buscophylo.lineage("poxviridae_odb10")
-buscophylo.mode("genome")
-buscophylo.directory("data")
+buscophylo.Token("YOUR_API")
+buscophylo.Project_Name("Project_Name")
+buscophylo.lineage("Lineage")
+buscophylo.mode("Mode")
+buscophylo.directory("Directory")
 buscophylo.run()
 ```
 
