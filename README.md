@@ -102,6 +102,7 @@ buscophylo.Project_Name("Project_Name")
 buscophylo.lineage("Lineage")
 buscophylo.mode("Mode")
 buscophylo.directory("Directory")
+buscophylo.Project_groupe("outgroup") # optional
 buscophylo.run()
 ```
 
