@@ -80,6 +80,32 @@ post_max_size=8000M
 
 # BuscoPhylo webserver
 BuscoPhylo webserver is freely accessible at [https://Buscophylo.inra.org.ma](https://buscophylo.inra.org.ma/)
+
+#BuscoPhylo API
+##Accessing the BuscoPhylo API
+The BuscoPhylo API can be accessed through the user dashboard and requires an API token for authentication. Your API token can be found under your user name in the dashboard.
+
+##Installing the BuscoPhylo API
+To install the BuscoPhylo API, run the following command in your terminal:
+
+```pip install buscophylo```
+
+##Using the BuscoPhylo API
+To use the BuscoPhylo API, import the buscophylo module and initiate an instance of the BuscoPhylo class with your API token, then run the run function:
+
+```from buscophylo import BuscoPhylo
+
+buscophylo = BuscoPhylo()
+buscophylo.Token("BUSCOPHYLO_63dff5936264b1675621779")
+buscophylo.Project_Name("test_api_v0.2.2")
+buscophylo.lineage("poxviridae_odb10")
+buscophylo.mode("genome")
+buscophylo.directory("data")
+buscophylo.run()```
+
+##Acknowledging BuscoPhylo
+If you use the BuscoPhylo API in your work, it is important to cite it in your publication to acknowledge its contribution. The BuscoPhylo API is also available on PyPI at https://pypi.org/project/BuscoPhylo/.
+
 # License
 BuscoPhylo is licensed under the MIT License.
 
