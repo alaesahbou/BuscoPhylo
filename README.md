@@ -82,7 +82,7 @@ post_max_size=8000M
 BuscoPhylo webserver is freely accessible at [https://Buscophylo.inra.org.ma](https://buscophylo.inra.org.ma/)
 
 # BuscoPhylo API
-##Accessing the BuscoPhylo API
+## Accessing the BuscoPhylo API
 The BuscoPhylo API can be accessed through the user dashboard and requires an API token for authentication. Your API token can be found under your user name in the dashboard.
 
 ## Installing the BuscoPhylo API
